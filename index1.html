@@ -1,67 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lingering Garden - Suzhou</title>
+    <title>Dongpo Pork</title>
     <style>
         body {
-            background-color: #f0e68c; /* Light golden background for a retro feel */
-            color: #000000; /* Black text for contrast */
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 20px;
+            background-color: #f5f5f5;
+            color: #333;
         }
         header {
             text-align: center;
             padding: 20px;
-            background-color: #4682b4; /* Steel blue header */
-            color: #ffffff;
-            border: 5px solid #ff4500; /* Retro style border */
+            background-color: #8b4513;
+            color: white;
+        }
+        nav {
+            background-color: #a0522d;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+        nav a:hover {
+            text-decoration: underline;
         }
         main {
-            background-color: #ffffff;
+            background-color: white;
             padding: 20px;
-            border: 3px solid #000000;
-            box-shadow: 10px 10px 0px #ff4500; /* Shadow to create a retro 3D effect */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         h1 {
-            font-size: 2em;
-            font-weight: bold;
-            margin-bottom: 20px;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 1.8em;
+            color: #8b4513;
+            margin-top: 20px;
+            margin-bottom: 10px;
         }
         p {
             font-size: 1.2em;
             margin-bottom: 15px;
         }
-        .retro-button {
-            display: inline-block;
-            background-color: #ff4500;
-            color: #ffffff;
-            padding: 10px 20px;
-            margin-top: 20px;
-            text-decoration: none;
-            border: 3px solid #000000;
-            box-shadow: 5px 5px 0px #000000;
-            font-weight: bold;
-        }
-        .retro-button:hover {
-            background-color: #ff6347; /* Slightly brighter hover effect */
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-left: 5px solid #8b4513;
+            font-size: 1.1em;
+            line-height: 1.8;
         }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>Welcome to the Lingering Garden</h1>
+        <h1>Dongpo Pork</h1>
     </header>
+
+    <nav>
+        <a href="#story">Story Behind It</a>
+        <a href="#recipe">Sushi's Recipe</a>
+    </nav>
+
     <main>
-        <p>The <strong>Lingering Garden</strong> (留园, Liú Yuán) is one of the most famous classical gardens in China, located in Suzhou, Jiangsu Province. It was originally built in 1593 during the Ming Dynasty by a government official named Xu Taishi and later underwent several renovations and ownership changes. The garden is renowned for its exquisite layout, intricate design, and the harmonious blending of natural and artificial elements.</p>
+        <section id="story">
+            <h2>Story Behind It</h2>
+            <p>While facing financial hardship during his exile in Huangzhou following the Crow Terrace Poetry Trial, Su Dongpo innovated upon the conventional method of preparing pork. He marinated the pork in a mixture of huangjiu (yellow wine), rock sugar, and soy sauce, and simmered it on low heat for long hours.</p>
+            <p>He composed a poem titled "An Ode to Pork", where he described that pork was a most affordable meat source locally, and by a slowing cooking method, he obtained both a delicacy and a survival food for the families. The recipe was subsequently adopted and developed by people in the Hangzhou area, the capital city of South Song Dynasty.</p>
+        </section>
 
-        <p>Covering an area of about 23,300 square meters, the Lingering Garden is divided into four distinct sections, each with its own unique style and features, including pavilions, halls, rockeries, ponds, and various plants. The garden is particularly famous for its elegant limestone formations, tranquil water features, and the use of borrowed scenery, where views from outside the garden are incorporated into the design.</p>
+        <section id="recipe">
+            <h2>Sushi's Recipe</h2>
+            <pre>
+猪肉颂 / Ode to Pork
+净洗铛，少著水 / Clean your pot, add but a little water
+柴头罨烟焰不起。/ Light the stove, keep the smoke at bay.
+待他自熟莫催他，/ It’s done when it’s done—how pointless to rush,
+火候足时他自美。/ With heat and time, a thing of beauty emerges.
+黄州好猪肉，价贱如泥土。/ Huangzhou has good pork, and cheap as dirt.
+贵者不肯吃，贫者不解煮，/ The rich won’t eat it; the common-folk don’t know how,
+早晨起来打两碗，/ I eat two bowls for breakfast,
+饱得自家君莫管。/ And I’m satisfied, with not a care in the world.
+            </pre>
+        </section>
+    </main>
 
-        <p>A hallmark of classical Chinese garden design, the Lingering Garden emphasizes balance, harmony, and the idealization of nature, making it a UNESCO World Heritage site and a popular tourist destination for those interested in traditional Chinese culture and landscape architecture.</p>
-
-        <a href="#" class="retro-button" aria-label="Learn more about Lingering Garden">Learn More</a>
+</body>
+</html>
     </main>
 </body>
 </html>
