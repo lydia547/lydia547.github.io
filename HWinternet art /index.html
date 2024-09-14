@@ -3,25 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Suzhou Embroidery</title>
+  <title>Ethical Essence</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <div class="container">
-    <div class="logo">
-      <img src="suzhou-embroidery-logo.png" alt="Suzhou Embroidery Logo">
+<body class="text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="absolute top-0 left-0 w-full flex justify-between items-center px-8 py-4">
+    <div class="flex items-center space-x-4">
+      <!-- Social Media Icon -->
+      <a href="#" class="text-black text-lg"><i class="fab fa-instagram"></i></a>
+      <span class="uppercase text-xs">@ethicalessence</span>
     </div>
-    <div class="content">
-      <h1>Suzhou Embroidery</h1>
-      <p class="description">
-        Suzhou Embroidery, also known as "Su Embroidery," is one of the oldest and most exquisite embroidery styles in China. With a history of over 2,500 years, it is renowned for its detailed, lifelike, and artistic designs, often featuring flowers, animals, and landscapes. The precision and beauty of Suzhou embroidery have made it an integral part of Chinese cultural heritage.
-      </p>
-      <button class="enter-btn" onclick="location.href='#'">Explore More</button>
+    <ul class="flex space-x-6">
+      <li><a href="#" class="hover:underline">Our Story</a></li>
+      <li><a href="#" class="hover:underline">Our Impact</a></li>
+      <li><a href="#" class="hover:underline">Our Products</a></li>
+      <li><a href="#" class="hover:underline">Learn</a></li>
+      <li><a href="#" class="hover:underline">Contact Us</a></li>
+    </ul>
+    <div class="flex items-center space-x-4">
+      <!-- Cart Icon -->
+      <a href="#" class="text-black text-lg"><i class="fas fa-shopping-cart"></i></a>
     </div>
-    <div class="enter-alt">
-      <a href="#">Enter Without Audio</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-bg flex items-center justify-center text-center text-white relative">
+    <div class="absolute inset-0 bg-black opacity-30"></div>
+    <div class="relative z-10">
+      <h1 class="uppercase text-xs mb-2">Ethical Essence</h1>
+      <h2 class="text-4xl md:text-6xl font-bold mb-4">a conscious skincare brand</h2>
+      <h3 class="text-2xl md:text-4xl mb-4">designed for naturally ageless skin.</h3>
+      <p class="uppercase text-sm tracking-wide">Experience the Difference</p>
     </div>
-  </div>
+  </section>
+
 </body>
 </html>
+
