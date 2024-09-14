@@ -5,7 +5,9 @@
   }
   
   body {
-    font-family: 'Arial', sans-serif;
+    font-family: dalliance-roman, sans-serif;
+    font-style: normal;
+    font-weight: 400;
     background-color: #001f3f; /* 深蓝色背景 */
     display: flex;
     justify-content: center;
@@ -32,7 +34,9 @@
   }
   
   .content h1 {
-    font-size: 2rem;
+    font-family: dalliance-roman, sans-serif;
+    font-style: normal;
+    font-weight: 400;
     color: #fff; /* 白色文字 */
     margin-bottom: 10px;
   }
