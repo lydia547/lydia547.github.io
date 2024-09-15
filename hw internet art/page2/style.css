@@ -1,0 +1,10 @@
+.image-container {
+    margin-top: 2rem; /* Adds margin above the image */
+    padding-left: 2rem; /* Adds padding to the left of the image to separate it from text */
+}
+
+@media (min-width: 1024px) {
+    .image-container {
+        margin-left: 2rem; /* Adds left margin on larger screens */
+    }
+}
