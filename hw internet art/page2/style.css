@@ -1,3 +1,15 @@
+body {
+    font-family: Georgia, serif; /* Set Georgia font for body content */
+}
+
+h1 {
+    font-weight: bold; /* Make header bold */
+}
+
+.content-text {
+    font-family: Georgia, serif; /* Apply Georgia font to content specifically */
+}
+
 .image-container {
     margin-top: 2rem; /* Adds margin above the image */
     padding-left: 2rem; /* Adds padding to the left of the image to separate it from text */
