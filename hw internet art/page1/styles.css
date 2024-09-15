@@ -25,21 +25,25 @@ body {
 
 .header h1 {
     font-size: 35px;
-    font-weight: 800;
-    color: #b0c0d9;
+    font-weight: 800px;
+    color: #abbedc;
+    font-family: Georgia, 'Times New Roman', Times, serif
    
 }
 
 .header p {
     font-size: 16px;
-    margin-bottom: 50px;
-    margin-top: 15px;
+    margin-bottom: 30px;
+    margin-top: 60px;
+    color: #60646c;
+    font-family: Georgia, 'Times New Roman', Times, serif
 }
 
 .header h2 {
     font-size: 20px;
-    color: #b0c0d9;
+    color: #60646c;
     font-weight: normal;
+    font-family: Georgia, 'Times New Roman', Times, serif
 }
 
 .carousel {
