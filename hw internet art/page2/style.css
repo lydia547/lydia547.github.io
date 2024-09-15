@@ -30,7 +30,11 @@ font-weight: 500px;}
 
 .content-container {
     background-color: rgba(211, 211, 211, 0.8); /* Light grey background with slight transparency */
-    border-radius: 8px; 
+    border-radius: 10px;
+    margin-top: 70px; 
+    padding: 40px; 
+    margin-bottom: 80px;
+    margin-left: 30px;
 }
 
 .image-container {
@@ -42,4 +46,12 @@ font-weight: 500px;}
     .image-container {
         margin-left: 2rem; /* Adds left margin on larger screens */
     }
+}
+footer {
+    margin-top: 30px; /* Ensures the footer is positioned relative to the body */
+}
+
+footer .flex {position: absolute; /* Allows absolute positioning within the footer */
+    bottom: 10px; /* Positions the buttons 10px from the bottom */
+    right: 10px; /* Positions the buttons 10px from the right corner */
 }
