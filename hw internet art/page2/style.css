@@ -1,13 +1,28 @@
 body {
     font-family: Georgia, serif; /* Set Georgia font for body content */
+    background-image: url('https://images.unsplash.com/photo-1689827524021-7d99d37c55c7?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover; /* Ensure the background image covers the entire page */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
 }
 
+.hidden-content {
+    display: none;
+}
 h1 {
-    font-weight: bold; /* Make header bold */
+    font-weight: 700px; /* Make header bold */
+    color: rgb(45, 50, 49);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.content-text {
-    font-family: Georgia, serif; /* Apply Georgia font to content specifically */
+p { color: rgb(22, 20, 18);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+font-weight: 500px;}
+
+.content-container {
+    background-color: rgba(211, 211, 211, 0.8); /* Light grey background with slight transparency */
+    border-radius: 8px; 
 }
 
 .image-container {

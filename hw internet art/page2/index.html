@@ -14,13 +14,12 @@
         <div class="flex items-center">
             <img src="https://i.pinimg.com/564x/d2/cf/c0/d2cfc039a6f158b0fa41c42b0e6c8490.jpg" 
                  alt="Icon" 
-                 class="h-8 w-8 rounded-full object-cover">
+                 class="h-10 w-9 rounded-full object-cover">
         </div>
-        <div class="text-2xl">•••</div>
     </header>
 
     <main class="container mx-auto flex flex-col lg:flex-row items-center py-12 px-6">
-        <div class="lg:w-1/2 mb-8 lg:mb-0">
+        <div class="lg:w-1/2 mb-8 lg:mb-0 p-6 content-container">
             <h1 class="text-3xl lg:text-4xl font-bold mb-4">It is from...</h1>
             <p class="text-lg leading-relaxed">
                 Suzhou embroidery originated in the Wu County area of Suzhou. The Qing Dynasty established “Su, Xiang,
@@ -28,11 +27,6 @@
                 Embroidery. Su embroidery has a delicate pattern, exquisite conception, meticulous embroidery, lively
                 needlework, elegant colors, and a unique style with strong local characteristics.
             </p>
-        </div>
-        <div class="lg:w-1/2 flex justify-center image-container">
-            <img src="https://images.unsplash.com/photo-1689827524021-7d99d37c55c7?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-                 alt="Suzhou City View" 
-                 class="rounded-lg shadow-lg object-cover">
         </div>
     </main>
 
@@ -51,6 +45,13 @@
                 </svg></button>
         </div>
     </footer>
+    <script>
+        function showContent() {
+            // Remove the 'hidden-content' class to show content
+            const elements = document.querySelectorAll('.hidden-content');
+            elements.forEach(el => el.classList.remove('hidden-content'));
+        }
+    </script>
 </body>
 
 </html>
