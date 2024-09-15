@@ -23,7 +23,8 @@
   }
   
   .logo img {
-    width: 120px;
+    width: 500px;
+    height: auto;
     margin-bottom: 20px;
   }
   
