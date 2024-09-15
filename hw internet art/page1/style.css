@@ -1,0 +1,64 @@
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 28px;
+    color: #b7410e;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.header h2 {
+    font-size: 20px;
+    color: #b7410e;
+    font-weight: normal;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel-item {
+    flex: none;
+    width: 300px;
+    margin: 0 10px;
+    scroll-snap-align: center;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .carousel-item {
+        width: 70%;
+        margin: 0 5px;
+    }
+}
