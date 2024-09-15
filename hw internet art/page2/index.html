@@ -47,10 +47,14 @@
     </footer>
     <script>
         function showContent() {
-            // Remove the 'hidden-content' class to show content
-            const elements = document.querySelectorAll('.hidden-content');
-            elements.forEach(el => el.classList.remove('hidden-content'));
-        }
+    const elements = document.querySelectorAll('.hidden-content');
+    elements.forEach(el => {
+        el.classList.remove('hidden-content');
+        el.style.transition = "opacity 0.5s ease-in-out";
+        el.style.opacity = 1;
+    });
+}
+
     </script>
 </body>
 
