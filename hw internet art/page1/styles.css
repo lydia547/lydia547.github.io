@@ -9,11 +9,11 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 10px;
+    padding: 5px;
 }
 
 .container {
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0;
     text-align: center;
@@ -24,8 +24,8 @@ body {
 }
 
 .header h1 {
-    font-size: 28px;
-    font-weight: 700px;
+    font-size: 35px;
+    font-weight: 800;
     color: #b0c0d9;
    
 }
@@ -53,7 +53,7 @@ body {
 .carousel-item {
     flex: none;
     width: 200px;
-    margin: 0 10px;
+    margin: 15px 20px;
     scroll-snap-align: center;
     position: relative;
     transition: transform 0.3s ease; /* 鼠标悬停时的过渡效果 */
@@ -62,7 +62,7 @@ body {
 .carousel-item img {
     width: 100%;
     height: auto; /* 保证图片比例一致 */
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease; /* 鼠标悬停时的过渡效果 */
 }
