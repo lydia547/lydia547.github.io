@@ -5,6 +5,10 @@ body {
     font-family: Arial, sans-serif;
     background-color: #fff;
     color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .container {
@@ -37,13 +41,15 @@ body {
 
 .carousel {
     display: flex;
+    justify-content: center;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    padding: 10px 0;
 }
 
 .carousel-item {
     flex: none;
-    width: 300px;
+    width: 200px;
     margin: 0 10px;
     scroll-snap-align: center;
     position: relative;
@@ -51,14 +57,20 @@ body {
 
 .carousel-item img {
     width: 100%;
+    height: auto; /* 保证图片比例一致 */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resize-image {
+    height: auto; /* 调整第四张图片的大小，保持一致 */
+    width: 100%;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .carousel-item {
-        width: 70%;
+        width: 150px;
         margin: 0 5px;
     }
 }
