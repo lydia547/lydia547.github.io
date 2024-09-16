@@ -1,28 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Suzhou Embroidery</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Image Gallery</title>
 </head>
 <body>
-  <div class="container">
-    <div class="logo">
-      <!-- 使用 <img> 标签加载图片 -->
-      <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.alicdn.com%2Fbao%2Fuploaded%2Fi1%2F2776875243%2FTB2NPeyspXXXXXqXpXXXXXXXXXX_%21%210-paimai.jpg&refer=http%3A%2F%2Fimg.alicdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1728938973&t=ff4607d1d9a3700552957dc1bbf9d77c" alt="Suzhou Embroidery Logo" height="300" width="300">
+  <div class="flex items-center">
+    <img src="https://i.pinimg.com/564x/d2/cf/c0/d2cfc039a6f158b0fa41c42b0e6c8490.jpg" alt="Icon"
+        class="h-4 w-4 rounded-full object-cover">
+   </div>
+    <div class="gallery-container">
+        <button class="nav-button" id="prev-button" onclick="changeImage(-1)">&#10094;</button>
+        <div class="image-container">
+            <img src="https://i.pinimg.com/564x/fd/83/f1/fd83f15a46a2435c93a4d400e6a2dc36.jpg" alt="Image 1" class="gallery-image" id="image1">
+            <img src="https://i.pinimg.com/564x/57/60/05/576005cee9a15dc05d90391fa4589037.jpg" alt="Image 2" class="gallery-image" id="image2">
+            <img src="https://i.pinimg.com/564x/e1/ba/6c/e1ba6c4c805a748dc3137209883a80c7.jpg" alt="Image 3" class="gallery-image" id="image3">
+        </div>
+        <button class="nav-button" id="next-button" onclick="changeImage(1)">&#10095;</button>
     </div>
-    <div class="content">
-      <h1>Suzhou Embroidery</h1>
-      <p class="description">
-        Suzhou Embroidery, also known as "Su Embroidery," is one of the oldest and most exquisite embroidery styles in China. With a history of over 2,500 years, it is renowned for its detailed, lifelike, and artistic designs, often featuring flowers, animals, and landscapes. The precision and beauty of Suzhou embroidery have made it an integral part of Chinese cultural heritage.
-      </p>
-      <!-- 使用相对路径跳转 -->
-      <button class="enter-btn" onclick="window.location.href='../page1/index.html'">Explore More</button>
-    </div>
-  </div>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.getElementsByClassName('gallery-image');
+
+        function showImage(index) {
+            for (let i = 0; i < images.length; i++) {
+                images[i].style.display = 'none';
+            }
+            images[index].style.display = 'block';
+        }
+
+        function changeImage(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) {
+                currentIndex = images.length - 1;
+            } else if (currentIndex >= images.length) {
+                currentIndex = 0;
+            }
+            showImage(currentIndex);
+        }
+
+        // Show the first image initially
+        showImage(currentIndex);
+    </script>
 </body>
+
 </html>
 
 
