@@ -19,7 +19,8 @@ body {
 h1 {
     font-weight: 700px; 
     color: rgb(45, 50, 49);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "pilsner", sans-serif;
+    font-size: 50px;
 }
 
 p {
