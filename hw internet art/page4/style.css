@@ -13,7 +13,7 @@
 
 /* Title styles */
 .main-title {
-    color: rgb(201, 219, 205);
+    color: rgb(31, 35, 32);
     font-size: 2.1rem;
     font-weight: bold;
     text-align: center;
@@ -28,7 +28,7 @@
     margin-right: 100px;
     line-height: 1.6;
     font-size: large;
-    color: #263129;
+    color: #c1e3be;
 
 }
 
@@ -195,7 +195,7 @@
 
 /* Button styles */
 .button {
-    background-color: #dc2626;
+    background-color: #8e8888;
     color: white;
     padding: 0.5rem 2rem;
     border-radius: 9999px;
