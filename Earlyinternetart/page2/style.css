@@ -1,24 +1,24 @@
 body {
-    font-family: Georgia, serif; /* Set Georgia font for body content */
+    font-family: Georgia, serif; 
     background-image: url('https://images.unsplash.com/photo-1689827524021-7d99d37c55c7?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-    background-size: cover; /* Ensures the background image covers the entire page */
-    background-position: center; /* Centers the background image */
-    background-repeat: no-repeat; /* Prevents the background image from repeating */
-    background-attachment: fixed; /* Keeps the background image fixed during scrolling */
-    min-height: 100vh; /* Ensures the minimum height of the body is the full viewport height */
-    margin: 0; /* Removes any default margin */
-    padding: 0; /* Removes any default padding */
-    overflow-x: hidden; /* Prevents horizontal scrolling if necessary */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    min-height: 100vh; 
+    margin: 0; 
+    padding: 0; 
+    overflow-x: hidden; 
 }
 
 
 .hidden-content {
-    display: block; /* Change to block for transition effects */
+    display: block;
     opacity: 0;
 }
 s
 h1 {
-    font-weight: 700px; /* Make header bold */
+    font-weight: 700px; 
     color: rgb(45, 50, 49);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -29,7 +29,7 @@ p { color: rgb(22, 20, 18);
 font-weight: 500px;}
 
 .content-container {
-    background-color: rgba(211, 211, 211, 0.8); /* Light grey background with slight transparency */
+    background-color: rgba(211, 211, 211, 0.8);
     border-radius: 10px;
     margin-top: 70px; 
     padding: 40px; 
