@@ -1,5 +1,5 @@
 body {
-    font-family: Georgia, serif; /* Set Georgia font for body content */
+    font-family: Georgia, serif;
 }
 
 h1 {
@@ -8,22 +8,22 @@ h1 {
 }
 
 .content-text {
-    font-family: Georgia, serif; /* Apply Georgia font to content specifically */
+    font-family: Georgia, serif;
 }
 
 .image-container {
-    margin-top: 15px; /* Adds margin above the image */
-    padding-left: 2rem; /* Adds padding to the left of the image to separate it from text */
-    display: flex; /* Ensure images are vertically aligned */
-    flex-direction: column; /* Align images vertically */
-    align-items: center; /* Center images horizontally within the container */
+    margin-top: 15px;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .image-wrapper {
-    position: relative; /* Allows for absolute positioning of overlay */
-    margin-bottom: 1rem; /* Adds space between each image */
-    width: 400px; /* Set the width for images */
-    height: 400px; /* Set the height for images */
+    position: relative;
+    margin-bottom: 1rem;
+    width: 400px;
+    height: 400px;
 }
 
 img {
@@ -33,7 +33,7 @@ img {
     border-radius: 8px;
     margin-bottom: 20px;
     margin-top: 10px;
-    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    transition: opacity 0.3s ease;
 }
 
 .image-wrapper::after {
@@ -51,42 +51,42 @@ img {
     align-items: center;
     font-size: 1.5rem;
     opacity: 0;
-    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    transition: opacity 0.3s ease;
     border-radius: 8px;
 }
 
 .overlay-1:hover::after {
-    opacity: 1; /* Makes the overlay visible on hover */
+    opacity: 1;
     background-image: url('https://i.pinimg.com/564x/1f/6d/22/1f6d221ba7013f4cb206514837184a44.jpg');
-    background-size: 200px; /* Resize the image to be smaller */
+    background-size: 200px;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .overlay-2:hover::after {
-    opacity: 1; /* Makes the overlay visible on hover */
-    background-image: url('https://i.pinimg.com/564x/f9/2a/d3/f92ad3f3434f7a20ca931285c2df9906.jpg'); /* Your overlay image URL */
-    background-size: 200px; /* Resize the image to be smaller */
+    opacity: 1;
+    background-image: url('https://i.pinimg.com/564x/f9/2a/d3/f92ad3f3434f7a20ca931285c2df9906.jpg');
+    background-size: 200px;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .overlay-3:hover::after {
-    opacity: 1; /* Makes the overlay visible on hover */
-    background-image: url('https://i.pinimg.com/564x/69/e6/1c/69e61c99035e8d316916de6d3a7ab52a.jpg'); /* Your overlay image URL */
-    background-size: 200px; /* Resize the image to be smaller */
+    opacity: 1;
+    background-image: url('https://i.pinimg.com/564x/69/e6/1c/69e61c99035e8d316916de6d3a7ab52a.jpg');
+    background-size: 200px;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 @media (min-width: 1024px) {
     .image-container {
-        margin-left: 2rem; /* Adds left margin on larger screens */
+        margin-left: 2rem;
     }
 }
 
 .bg-black {
-    background-color: rgb(187, 180, 180); /* Sets the background color to black */
+    background-color: rgb(187, 180, 180);
 }
 
 .text-white {
@@ -95,15 +95,16 @@ img {
 }
 
 .option-btn {
-    width: 60px; /* Fixed width to create a circular button */
-    height: 60px; /* Fixed height to match the width */
-    padding: 0; /* No padding to maintain the circular shape */
-    border: none; /* Removes any default border */
-    cursor: pointer; /* Changes the cursor to a pointer on hover */
-    border-radius: 50%; /* Makes the button circular */
-    display: flex; /* Aligns the text in the center */
-    align-items: center; /* Centers text vertically */
-    justify-content: center; /* Centers text horizontally */
-    font-size: 12px; /* Adjust font size as needed */
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
 }
+
 

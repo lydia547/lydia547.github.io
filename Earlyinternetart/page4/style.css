@@ -1,6 +1,5 @@
-/* Body styles */
 .body-bg {
-    background-color: #556b5c; /* Dark green background */
+    background-color: #556b5c;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,7 +10,6 @@
     box-sizing: border-box;
 }
 
-/* Title styles */
 .main-title {
     color: rgb(31, 35, 32);
     font-size: 2.1rem;
@@ -21,18 +19,16 @@
 }
 
 .content-text {
-    font-family: Georgia, serif; 
-    margin-bottom:350px;
+    font-family: Georgia, serif;
+    margin-bottom: 350px;
     text-align: center;
     margin-left: 100px;
     margin-right: 100px;
     line-height: 1.6;
     font-size: large;
     color: #c1e3be;
-
 }
 
-/* Progress bar container */
 .progress-container {
     display: flex;
     align-items: center;
@@ -47,10 +43,9 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-top: 20px; /* Add margin between titles and line */
+    margin-top: 20px;
 }
 
-/* Title styles for progress bar */
 .progress-title {
     color: white;
     font-size: 1rem;
@@ -58,7 +53,7 @@
     flex: 1;
     position: absolute;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    cursor: pointer; /* Shows pointer cursor to indicate interactivity */
+    cursor: pointer;
     outline: none;
 }
 
@@ -78,7 +73,6 @@
     margin-top: 20px;
 }
 
-/* Progress line container */
 .progress-line-container {
     position: relative;
     width: 100%;
@@ -89,32 +83,30 @@
     height: 1rem;
 }
 
-/* Hover and focus image for BIRDS */
 .title-birds::before {
     content: "";
     position: absolute;
-    top: -350px; /* Adjust position above "BIRDS" */
+    top: -350px;
     left: 50%;
     transform: translateX(-50%);
-    width: 200px; /* Increased size to make the image bigger */
-    height: 300px; /* Maintain aspect ratio or adjust to your preference */
+    width: 200px;
+    height: 300px;
     background-image: url('https://i.pinimg.com/564x/fd/83/f1/fd83f15a46a2435c93a4d400e6a2dc36.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0;
     transition: opacity 0.3s ease;
-    pointer-events: none; 
+    pointer-events: none;
 }
 
-/* Hover and focus image for FLOWERS */
 .title-flowers::before {
     content: "";
     position: absolute;
-    top: -350px; /* Adjust position above "FLOWERS" */
+    top: -350px;
     left: 50%;
     transform: translateX(-50%);
-    width: 200px; /* Adjusted size to match the image for BIRDS */
-    height: 300px; /* Maintain aspect ratio or adjust to your preference */
+    width: 200px;
+    height: 300px;
     background-image: url('https://i.pinimg.com/564x/57/60/05/576005cee9a15dc05d90391fa4589037.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -123,15 +115,14 @@
     pointer-events: none;
 }
 
-/* Hover and focus image for PORTRAITS */
 .title-portraits::before {
     content: "";
     position: absolute;
-    top: -350px; /* Adjust position above "PORTRAITS" */
+    top: -350px;
     left: 50%;
     transform: translateX(-50%);
-    width: 200px; /* Adjusted size to match the other images */
-    height: 300px; /* Maintain aspect ratio or adjust to your preference */
+    width: 200px;
+    height: 300px;
     background-image: url('https://i.pinimg.com/564x/e1/ba/6c/e1ba6c4c805a748dc3137209883a80c7.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -140,7 +131,6 @@
     pointer-events: none;
 }
 
-/* Keep each image visible when the corresponding word is clicked or hovered */
 .title-birds:focus::before,
 .title-birds:hover::before {
     opacity: 1;
@@ -156,7 +146,6 @@
     opacity: 1;
 }
 
-/* Progress line container */
 .progress-line-container {
     position: relative;
     width: 80%;
@@ -167,7 +156,6 @@
     height: 1rem;
 }
 
-/* Progress line */
 .progress-line {
     position: absolute;
     top: 50%;
@@ -177,7 +165,6 @@
     z-index: 1;
 }
 
-/* Progress circles */
 .progress-circle {
     border: 2px solid white;
     background-color: #556b5c;
@@ -187,13 +174,11 @@
     z-index: 2;
 }
 
-/* Button container to move button lower */
 .button-container {
     position: absolute;
     bottom: 2rem;
 }
 
-/* Button styles */
 .button {
     background-color: #8e8888;
     color: white;
@@ -208,5 +193,3 @@
 .button:hover {
     background-color: #b91c1c;
 }
-
-
