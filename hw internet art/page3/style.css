@@ -1,0 +1,65 @@
+body {
+    font-family: Georgia, serif; /* Set Georgia font for body content */
+}
+
+h1 {
+    font-weight: bold;
+    margin-top: 200px;
+}
+
+.content-text {
+    font-family: Georgia, serif; /* Apply Georgia font to content specifically */
+}
+
+.image-container {
+    margin-top: 15px; /* Adds margin above the image */
+    padding-left: 2rem; /* Adds padding to the left of the image to separate it from text */
+    display: flex; /* Ensure images are vertically aligned */
+    flex-direction: column; /* Align images vertically */
+    align-items: center; /* Center images horizontally within the container */
+}
+
+.image-wrapper {
+    position: relative; /* Allows for absolute positioning of overlay */
+    margin-bottom: 1rem; /* Adds space between each image */
+    width: 400px; /* Set the width for images */
+    height: 400px; /* Set the height for images */
+}
+
+img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.image-wrapper::after {
+    content: 'Gucci'; /* Text to display on hover */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    background-color: rgba(211, 211, 211, 0.8); /* Light gray background */
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    pointer-events: none; /* Prevents the text from interfering with hover effect */
+}
+
+.image-wrapper:hover::after {
+    opacity: 1; /* Makes the text visible on hover */
+}
+
+@media (min-width: 1024px) {
+    .image-container {
+        margin-left: 2rem; /* Adds left margin on larger screens */
+    }
+}
+
+
