@@ -13,12 +13,23 @@
 
 /* Title styles */
 .main-title {
-    color: white;
-    font-size: 2rem;
+    color: rgb(201, 219, 205);
+    font-size: 2.1rem;
     font-weight: bold;
-    margin-bottom: 350px;
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.content-text {
+    font-family: Georgia, serif; 
+    margin-bottom:350px;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    line-height: 1.6;
+    font-size: large;
+    color: #263129;
+
 }
 
 /* Progress bar container */
@@ -52,7 +63,7 @@
 }
 
 .title-birds {
-    left: 0;
+    left: 8%;
     margin-top: 20px;
 }
 
@@ -63,7 +74,7 @@
 }
 
 .title-portraits {
-    right: 0;
+    right: 8%;
     margin-top: 20px;
 }
 
@@ -121,7 +132,7 @@
     transform: translateX(-50%);
     width: 200px; /* Adjusted size to match the other images */
     height: 300px; /* Maintain aspect ratio or adjust to your preference */
-    background-image: url('https://i.pinimg.com/564x/ba/8a/b9/ba8ab9fb5d5a0a4d61c6a8d92968c0f1.jpg');
+    background-image: url('https://i.pinimg.com/564x/e1/ba/6c/e1ba6c4c805a748dc3137209883a80c7.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0;
@@ -148,7 +159,7 @@
 /* Progress line container */
 .progress-line-container {
     position: relative;
-    width: 100%;
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -191,8 +202,11 @@
     text-decoration: none;
     font-size: 1rem;
     transition: background-color 0.3s ease;
+    margin-top: 20px;
 }
 
 .button:hover {
     background-color: #b91c1c;
 }
+
+
