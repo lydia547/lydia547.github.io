@@ -1,0 +1,156 @@
+/* General Body and Layout */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: white;
+  }
+  
+  .logo {
+    float: left;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-img {
+    height: 50px;
+    width: auto;
+  }
+  
+  .logo-text {
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .nav-links {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .nav-links a {
+    color: #007BFF;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .nav-icons {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  
+  .language-select {
+    display: none; /* Hidden on small screens */
+  }
+  
+  .cart-icon img {
+    height: 20px;
+    width: auto;
+  }
+  
+  /* Responsive: Show language on larger screens */
+  @media (min-width: 768px) {
+    .language-select {
+      display: block;
+    }
+  }
+  
+  /* Main Content */
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .main-title {
+    font-size: 3rem;
+    color: #1E40AF;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    color: #6B7280;
+    margin-top: 0.5rem;
+  }
+  
+  /* Background Design Elements */
+  .bg-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  .bg-element {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+  }
+  
+  /* Background Shapes */
+  .bg-tree { background-color: #56C77B; border-radius: 50%; }
+  .bg-cloud { background-color: #AEC6CF; border-radius: 50%; }
+  .bg-orange { background-color: #FFB347; border-radius: 50%; }
+  .bg-blue { background-color: #77B5FE; border-radius: 50%; }
+  .bg-polygon { background-color: #FF6961; clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #F3F4F6;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Grid and Flexbox Example */
+  .footer {
+    display: grid;
+    place-items: center;
+  }
+  
+  .navbar,
+  .main-content {
+    display: flex;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .main-content {
+    display: grid;
+    place-items: center;
+  }
+  
+  /* Floats Example */
+  .logo {
+    float: left;
+  }
+  
