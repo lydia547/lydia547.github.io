@@ -1,19 +1,19 @@
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "dogma-bold", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   margin: 0;
   padding: 0;
-  
   position: relative;
   min-height: 100vh;
 }
 
-/* Navigation Bar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #1a1a1a; /* Dark background */
+  background-color: #1a1a1a;
 }
 
 .logo {
@@ -58,140 +58,150 @@ body {
   left: 0;
 }
 
-/* Animation for Hello Cutea */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translateY(20px); /* Start slightly below its position */
+    transform: translateY(20px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0); /* End at its original position */
+    transform: translateY(0);
   }
 }
 
-/* Apply animation to the main title */
 .main-title {
-  font-size: 3rem;
-  color: #1E40AF;
-  opacity: 0; /* Initially invisible */
-  animation: fadeInUp 1.5s ease-in-out forwards; /* Trigger animation */
- 
-}
-
-/* Apply the same animation to subtitle */
-.subtitle {
-  font-size: 1.2rem;
-  color: #6B7280;
-  margin-top: 0.5rem;
-  opacity: 0; /* Initially invisible */
-  animation: fadeInUp 2s ease-in-out forwards; /* Trigger animation with delay */
-  animation-delay: 0.5s; /* Slight delay for subtitle */
-}
-
-.main-title {
-  font-size: 3rem;
-  color: #1E40AF;
+  font-size: 4rem;
+  color: #59775e;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-in-out forwards;
+  font-weight: 700;
 }
 
 .subtitle {
   font-size: 1.2rem;
+  color: #1a1b1d;
+  margin-top: 0.5rem;
+  opacity: 0;
+  animation: fadeInUp 2s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+.main-title {
+  font-size: 3rem;
+  color: #1a644f;
+}
+
+.subtitle {
+  font-size: 1.2rem;
   color: #6B7280;
   margin-top: 0.5rem;
 }
 
-/* About Cutea Section */
 #about-us {
-  background-color: #d4edda; /* Light green background */
-  padding: 60px 20px; /* Add padding to the section */
+  background-color: #d4edda;
+  padding: 60px 20px;
   text-align: center;
-  border-radius: 8px; /* Optional: adds rounded corners */
+  border-radius: 8px;
 }
 
 #about-us h1 {
-  font-size: 4rem; /* Adjusting heading size for this section */
+  font-size: 4rem;
   font-weight: bold;
-  color: #1E40AF; /* You can adjust text color if needed */
+  color: #e4c77d;
 }
 
 #about-us p {
-  color: #333333; /* Adjusting text color to make it readable on light green */
+  color: #100f0f;
   margin-top: 20px;
   line-height: 1.7;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-
-
-
-/* Section Styling */
 .container {
   margin-top: 80px;
   padding: 4rem;
 }
 
 .scroll-section {
-  margin-top: 60px; /* Add space between sections */
-  padding: 60px 0;  /* Add padding around the section content */
+  margin-top: 60px;
+  padding: 60px 0;
   text-align: center;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 600;
   text-align: center;
   margin-bottom: 40px;
 }
 
-/* Keyframes for fade-in and slide-up animation */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translateY(30px); /* Start slightly below its original position */
+    transform: translateY(30px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0); /* End at its original position */
+    transform: translateY(0);
   }
 }
 
-
-
-/* Media queries to make it responsive */
 @media (max-width: 768px) {
   #about-us h1 {
-    font-size: 3rem; /* Adjust font size for smaller screens */
+    font-size: 3rem;
   }
 
   #about-us h2.matcha {
-    font-size: 4rem; /* Adjust size for smaller screens */
+    font-size: 4rem;
   }
 
   #about-us p {
-    font-size: 1rem; /* Smaller text size for readability */
+    font-size: 1rem;
   }
 }
 
+.matcha-image {
+  width: 50%;
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
 
-/* Main Content */
+@media (min-width: 768px) {
+  .matcha-image {
+    max-width: 100%;
+  }
+}
+
+.text-lg {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.md\:text-2xl {
+  font-size: 2rem;
+  text-align: center;
+}
+
 .main-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-top: 50px;
-  padding: 60px 0;
-  
+  margin-top: 70px;
+  padding: 90px 0;
+  margin-bottom: 30px;
 }
 
-/* Product Container */
 .product-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
   margin-bottom: 40px;
   background-color: #6B7280;
-
 }
 
 .product-item {
@@ -219,7 +229,6 @@ h1 {
   margin-top: 10px;
 }
 
-/* Background Design Elements */
 .bg-elements {
   position: absolute;
   top: 0;
@@ -236,8 +245,6 @@ h1 {
   height: 60px;
 }
 
-
-
 .product-container {
   display: flex;
   justify-content: center;
@@ -246,22 +253,22 @@ h1 {
 }
 
 .product-item {
-  width: 300px; /* Define a consistent width for product items */
+  width: 300px;
   text-align: center;
   margin: 20px;
 }
 
 .product-image {
-  width: 100%; /* Image takes up full width of the product item */
-  max-width: 250px; /* Define a max width for consistency */
-  height: 250px; /* Define a constant height */
-  object-fit: cover; /* Ensures the image fills the area without distortion */
+  width: 100%;
+  max-width: 250px;
+  height: 250px;
+  object-fit: cover;
   border-radius: 8px;
   transition: transform 0.3s ease;
 }
 
 .product-image:hover {
-  transform: scale(1.05); /* Adds a hover effect */
+  transform: scale(1.05);
 }
 
 .product-title {
@@ -270,19 +277,17 @@ h1 {
   margin-top: 10px;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .product-item {
-    width: 100%; /* Makes product items take full width on smaller screens */
+    width: 100%;
   }
 
   .product-image {
-    max-width: 200px; /* Adjust the image size further for smaller screens */
+    max-width: 200px;
     height: 200px;
   }
 }
 
-/* Footer */
 .footer {
   text-align: center;
   padding: 20px;
