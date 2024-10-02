@@ -13,7 +13,7 @@
       margin-top: 50px;
     }
 
-    /* Apply the font to the header */
+    
     h1 {
       font-family: "dalliance-roman", sans-serif;
       font-weight: 400;
@@ -25,23 +25,23 @@
       height: 200px;
       margin: 20px auto;
       border: 2px solid #000;
-      border-radius: 50%; /* Make it a circle */
-      transition: all 0.3s ease; /* Smooth animation */
+      border-radius: 50%; 
+      transition: all 0.3s ease; 
       position: relative;
     }
     #colorPicker {
-      margin-top: 20px;
-      padding: 10px;
+      margin-top: 60px;
+      padding: 0;
     }
 
-    /* Apply the font to the Yay text */
+    
     #yayText {
       position: absolute;
-      bottom: -50px; /* Hidden below the balloon */
+      bottom: -50px; 
       left: 50%;
       transform: translateX(-50%);
       font-size: 2em;
-      opacity: 0; /* Hidden initially */
+      opacity: 0; 
       transition: opacity 0.3s ease;
       font-family: "dalliance-roman", sans-serif;
       font-weight: 400;
@@ -58,7 +58,7 @@
         opacity: 0;
       }
       100% {
-        bottom: 50%;
+        bottom: 80%;
         opacity: 1;
         transform: translate(-50%, -50%);
       }
@@ -67,17 +67,16 @@
 </head>
 <body>
 
-  <h1>Color Picker</h1>
+  <h1>Color Inflation</h1>
   
-  <!-- Balloon shape -->
   <div id="color-box">
-    <div id="yayText">Yay!</div> <!-- Hidden Yay text -->
+    <div id="yayText">Yay!</div> 
   </div>
   
-  <!-- Color Picker placed below the balloon -->
   <input type="color" id="colorPicker">
 
   <script src="script.js"></script>
 </body>
 </html>
+
 
