@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://use.typekit.net/xcy3qnz.css">
   <title>Color Picker</title>
+  <link rel="stylesheet" href="https://use.typekit.net/xcy3qnz.css">
+  
   <style>
-      body {
+    body {
       font-family: Arial, sans-serif;
       text-align: center;
       margin-top: 50px;
     }
 
+    /* Apply the font to the header */
     h1 {
       font-family: "dalliance-roman", sans-serif;
       font-weight: 400;
@@ -23,28 +25,33 @@
       height: 200px;
       margin: 20px auto;
       border: 2px solid #000;
-      border-radius: 50%;
-      transition: all 0.3s ease;
+      border-radius: 50%; /* Make it a circle */
+      transition: all 0.3s ease; /* Smooth animation */
+      position: relative;
     }
-    .color-code {
-      font-size: 1.5em;
-      margin-top: 10px;
+    #colorPicker {
+      margin-top: 20px;
+      padding: 10px;
     }
+
+    /* Apply the font to the Yay text */
     #yayText {
       position: absolute;
       bottom: -50px; /* Hidden below the balloon */
       left: 50%;
       transform: translateX(-50%);
-      font-size: 4em;
+      font-size: 2em;
       opacity: 0; /* Hidden initially */
       transition: opacity 0.3s ease;
       font-family: "dalliance-roman", sans-serif;
       font-weight: 400;
       font-style: normal;
     }
+
     .slide-up {
       animation: slideUp 1s forwards;
     }
+
     @keyframes slideUp {
       0% {
         bottom: -50px;
@@ -60,15 +67,17 @@
 </head>
 <body>
 
-  <h1>Color Inflation</h1>
-
+  <h1>Color Picker</h1>
+  
+  <!-- Balloon shape -->
   <div id="color-box">
-    <div id="yayText">Yay!</div>
+    <div id="yayText">Yay!</div> <!-- Hidden Yay text -->
   </div>
-
+  
+  <!-- Color Picker placed below the balloon -->
   <input type="color" id="colorPicker">
 
- 
   <script src="script.js"></script>
 </body>
 </html>
+

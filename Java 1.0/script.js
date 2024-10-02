@@ -1,31 +1,30 @@
 // Get references to the elements in the HTML
 const colorPicker = document.getElementById('colorPicker');
 const colorBox = document.getElementById('color-box');
-const colorCode = document.getElementById('colorCode');
+const yayText = document.getElementById('yayText');
 
-let currentSize = 200; // Initial size of the color box
+// Initialize the size of the balloon
+let balloonSize = 200; // Starting size (200px)
 
-// Function to update the color box and hex code display
+// Function to update the balloon size and color
 colorPicker.addEventListener('input', function() {
   const selectedColor = colorPicker.value; // Get the selected color
-  colorBox.style.backgroundColor = selectedColor; // Update the color box
-  colorCode.textContent = selectedColor; // Show the hex code of the color
+  colorBox.style.backgroundColor = selectedColor; // Update the balloon color
 
-  // Increase the size of the color box
-  currentSize += 50; // Increment size by 50px each time a color is selected
-  colorBox.style.width = currentSize + 'px';
-  colorBox.style.height = currentSize + 'px';
+  // Increase the size of the balloon, but stop at 800px
+  if (balloonSize < 800) {
+    balloonSize += 50; // Increase the size by 50px each time
+  }
 
-  // If the color box size reaches or exceeds the viewport size, make it full screen
-  if (currentSize >= window.innerWidth || currentSize >= window.innerHeight) {
-    colorBox.style.width = '100vw'; // Full width of the viewport
-    colorBox.style.height = '100vh'; // Full height of the viewport
-    colorBox.style.position = 'fixed'; // Fix it in place
-    colorBox.style.top = '0';
-    colorBox.style.left = '0';
-    colorBox.style.margin = '0'; // Remove any margin
+  colorBox.style.width = `${balloonSize}px`; // Set the new width
+  colorBox.style.height = `${balloonSize}px`; // Set the new height
+
+  // Trigger the "Yay!" text animation when the balloon reaches 800px
+  if (balloonSize >= 800) {
+    yayText.classList.add('slide-up'); // Add the slide-up class for animation
   }
 });
+
 
 
 
