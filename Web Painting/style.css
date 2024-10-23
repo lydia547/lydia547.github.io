@@ -1,25 +1,67 @@
+/* Reset and universal styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body styling */
 body, html {
     height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a; /* Black background */
+    color: white; /* White text */
+}
+
+/* Header (nav bar) styling */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    z-index: 3;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
     display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: grey;
+}
+
+/* Intro container with text */
+.intro-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #1a1a1a;
-    font-family: 'Arial', sans-serif;
-    color: #fff;
-}
-
-.intro-container {
-    text-align: center;
+    z-index: 2;
+    transition: transform 1s ease-in-out;
 }
 
 .text-line {
     font-size: 2.5rem;
+    color: white;
     opacity: 0;
     transform: translateY(-20px);
     transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
@@ -40,6 +82,7 @@ body, html {
     animation-delay: 2.5s;
 }
 
+/* Fade in keyframe animation */
 @keyframes fadeIn {
     to {
         opacity: 1;
@@ -47,22 +90,10 @@ body, html {
     }
 }
 
-/* Responsiveness */
-@media (max-width: 768px) {
-    .text-line {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .text-line {
-        font-size: 1.5rem;
-    }
-}
-
+/* Main content styling */
 .main-content {
     display: flex;
-    width: 400vw; /* Adjust width based on number of images */
+    width: 300vw; /* Adjust width based on number of images */
     height: 100vh;
     position: absolute;
     top: 0;
@@ -76,7 +107,6 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
 
 .picture img {
@@ -85,9 +115,14 @@ body, html {
     object-fit: cover;
 }
 
+/* Media queries for responsiveness */
 @media (max-width: 768px) {
     .text-line {
         font-size: 2rem;
+    }
+
+    .nav-links li a {
+        font-size: 1rem;
     }
 }
 
@@ -95,4 +130,10 @@ body, html {
     .text-line {
         font-size: 1.5rem;
     }
+
+    .nav-links li a {
+        font-size: 0.8rem;
+    }
 }
+
+
