@@ -13,6 +13,17 @@ body, html {
     color: white; /* White text */
 }
 
+/* Hidden class for the navbar initially */
+.hidden {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+/* Visible class for the navbar after intro */
+.visible {
+    opacity: 1;
+}
+
 /* Header (nav bar) styling */
 header {
     position: fixed;
@@ -135,5 +146,3 @@ header {
         font-size: 0.8rem;
     }
 }
-
-
