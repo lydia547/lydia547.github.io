@@ -1,4 +1,7 @@
-/* Reset and universal styles */
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -101,7 +104,23 @@ header {
     }
 }
 
-/* Main content styling */
+/* New intro text section */
+.intro-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  /* Ensures sentences are stacked vertically */
+    text-align: center;
+    font-size: 1 em; /* Slightly larger font */
+    margin-top: 60px;
+    max-width: 800px;
+    height: 80vh;  /* Ensure it takes most of the page's height for centering */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 2s ease-in-out;
+    margin-right: 50px;
+}
+
+/* Styling for the main content section */
 .main-content {
     display: flex;
     width: 300vw; /* Adjust width based on number of images */
@@ -110,8 +129,12 @@ header {
     top: 0;
     left: 100vw; /* Initially hidden */
     transition: transform 2s ease-in-out;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 2s ease-in-out;
+    margin-top: 100px; /* Add margin to create space before images appear */
 }
 
+/* Image container */
 .picture {
     width: 100vw;
     height: 100%;
@@ -120,10 +143,20 @@ header {
     align-items: center;
 }
 
-.picture img {
+.picture img, .picture iframe {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* Fade-in effect */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.hidden {
+    opacity: 0;
 }
 
 /* Media queries for responsiveness */
@@ -144,5 +177,70 @@ header {
 
     .nav-links li a {
         font-size: 0.8rem;
+    }
+}
+
+/* Contact Section Styling */
+.contact-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #1a1a1a; /* Match with your site background */
+    color: white;
+    margin-top: 50px; /* Space between the Tokyo image and contact form */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 50vh;  /* Ensures it's vertically centered on the page */
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    width: 100%; /* Ensure the form scales responsively */
+    margin: 0 auto;
+}
+
+.contact-form label {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    align-self: flex-start;
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #e67e22;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .contact-form input, .contact-form button {
+        width: 100%;
     }
 }
