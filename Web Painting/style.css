@@ -11,10 +11,15 @@ html {
 /* Body styling */
 body, html {
     height: 100%;
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Disable vertical scrolling */
     font-family: 'Arial', sans-serif;
     background-color: #1a1a1a; /* Black background */
     color: white; /* White text */
+    scroll-behavior: smooth; /* Smooth horizontal scrolling */
 }
+
 
 /* Hidden class for the navbar initially */
 .hidden {
@@ -55,6 +60,13 @@ header {
 
 .nav-links li a:hover {
     color: grey;
+}
+
+.scroll-container {
+    display: flex;
+    flex-direction: row; /* Arrange sections in a row horizontally */
+    width: 300vw; /* Adjust based on number of sections */
+    height: 100vh; /* Full height for all sections */
 }
 
 /* Intro container with text */
@@ -131,7 +143,8 @@ header {
     transition: transform 2s ease-in-out;
     opacity: 0; /* Initially hidden */
     transition: opacity 2s ease-in-out;
-    margin-top: 100px; /* Add margin to create space before images appear */
+    margin-top: 100px;
+    margin-bottom: 50px; /* Add margin to create space before images appear */
 }
 
 /* Image container */
@@ -177,70 +190,5 @@ header {
 
     .nav-links li a {
         font-size: 0.8rem;
-    }
-}
-
-/* Contact Section Styling */
-.contact-section {
-    padding: 50px;
-    text-align: center;
-    background-color: #1a1a1a; /* Match with your site background */
-    color: white;
-    margin-top: 50px; /* Space between the Tokyo image and contact form */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 50vh;  /* Ensures it's vertically centered on the page */
-}
-
-.contact-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 500px;
-    width: 100%; /* Ensure the form scales responsively */
-    margin: 0 auto;
-}
-
-.contact-form label {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    align-self: flex-start;
-}
-
-.contact-form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: none;
-    font-size: 1rem;
-}
-
-.contact-form button {
-    padding: 10px 20px;
-    background-color: #f39c12;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-    background-color: #e67e22;
-}
-
-/* Responsive for smaller screens */
-@media (max-width: 768px) {
-    .contact-form input, .contact-form button {
-        width: 100%;
     }
 }
