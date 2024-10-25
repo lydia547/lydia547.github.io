@@ -20,7 +20,6 @@ body, html {
     scroll-behavior: smooth; /* Smooth horizontal scrolling */
 }
 
-
 /* Hidden class for the navbar initially */
 .hidden {
     opacity: 0;
@@ -123,13 +122,14 @@ header {
     align-items: center;
     flex-direction: column;  /* Ensures sentences are stacked vertically */
     text-align: center;
-    font-size: 1 em; /* Slightly larger font */
-    margin-top: 60px;
-    max-width: 800px;
+    font-size: 1em; /* Slightly larger font */
+    margin-top: 200px;
+    max-width: 700px;
     height: 80vh;  /* Ensure it takes most of the page's height for centering */
     opacity: 0; /* Initially hidden */
     transition: opacity 2s ease-in-out;
     margin-right: 50px;
+    margin-left: 50px;
 }
 
 /* Styling for the main content section */
@@ -162,6 +162,54 @@ header {
     object-fit: cover;
 }
 
+/* Shanghai Section */
+.shanghai-section {
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+/* Shanghai Content Styling */
+.shanghai-content {
+    display: flex;
+    flex-direction: row; /* Align items horizontally */
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Add space between the image and the text */
+    max-width: 1200px; /* Set a max width for the whole section */
+    margin: auto;
+    height: 700px;
+}
+
+/* Shanghai Text Styling */
+.shanghai-text {
+    font-size: 1.2rem;
+    color: white;
+    line-height: 1.6;
+    max-width: 50%; /* Set the text to take the other half of the section */
+    text-align: left;
+    margin-right: 80px;
+}
+
+/* Ensure the GIF resizes and fits within the page */
+.shanghai-content iframe {
+    max-width: 50%; /* Take half of the section */
+    height: 700px;
+    object-fit: contain;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.shanghai-content iframe,
+.shanghai-text {
+    padding: 10px;
+}
+
+
 /* Fade-in effect */
 .fade-in {
     opacity: 0;
@@ -190,5 +238,202 @@ header {
 
     .nav-links li a {
         font-size: 0.8rem;
+    }
+}
+/* Fudan Overlay Styling */
+.fudan-overlay {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially hidden on the right */
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a; /* Dark background */
+    color: white;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.5s ease; /* Slide-in effect */
+}
+
+/* Fudan Content Styling */
+.fudan-overlay-content {
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.fudan-overlay h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* Fudan Images Grid */
+.fudan-images {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.fudan-images img {
+    max-width: 30%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Close Button Styling */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Show Overlay when class active is added */
+.fudan-overlay.active {
+    right: 0; /* Slides in to cover the full screen */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .fudan-images img {
+        max-width: 45%;
+    }
+
+    .fudan-overlay h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .fudan-images img {
+        max-width: 90%;
+    }
+}
+
+/* UCCA Overlay */
+.ucca-overlay {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially hidden on the right */
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+    color: white;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.5s ease;
+    overflow: hidden; /* Prevents overflow due to floating images */
+}
+
+.ucca-overlay-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Close Button Styling */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Dynamic Floating Image Styling */
+.ucca-images img {
+    position: absolute;
+    width: 15%; /* Resize images to fit aesthetically */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: float 10s infinite ease-in-out;
+}
+
+/* Float animation to move the images randomly */
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(50px, -30px);
+    }
+    50% {
+        transform: translate(-50px, 50px);
+    }
+    75% {
+        transform: translate(30px, -50px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* Assign random initial positions for the images */
+.ucca-images img:nth-child(1) {
+    top: 10%;
+    left: 15%;
+    animation-duration: 12s;
+}
+
+.ucca-images img:nth-child(2) {
+    top: 30%;
+    left: 50%;
+    animation-duration: 14s;
+}
+
+.ucca-images img:nth-child(3) {
+    top: 50%;
+    left: 10%;
+    animation-duration: 10s;
+}
+
+.ucca-images img:nth-child(4) {
+    top: 70%;
+    left: 70%;
+    animation-duration: 16s;
+}
+
+.ucca-images img:nth-child(5) {
+    top: 20%;
+    left: 80%;
+    animation-duration: 18s;
+}
+
+/* Make images responsive */
+@media (max-width: 768px) {
+    .ucca-images img {
+        width: 25%; /* Resize images for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .ucca-images img {
+        width: 35%; /* Further resize for mobile */
     }
 }
