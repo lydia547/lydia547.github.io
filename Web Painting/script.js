@@ -54,10 +54,6 @@ const uccaLink = document.querySelector('.ucca-link');
 const uccaOverlay = document.getElementById('ucca-overlay');
 const closeUccaBtn = document.getElementById('close-ucca');
 
-const mediaBrandsLink = document.querySelector('.mediabrands-link');
-const mediaBrandsOverlay = document.getElementById('mediabrands-overlay');
-const closeMediaBrandsBtn = document.getElementById('close-mediabrands');
-
 // Add click event to UCCA Edge link
 uccaLink.addEventListener('click', function (e) {
     e.preventDefault();
@@ -71,17 +67,75 @@ closeUccaBtn.addEventListener('click', function () {
     document.body.style.overflow = ''; // Re-enable background scrolling
 });
 
-// Add click event to MediaBrands link
-mediaBrandsLink.addEventListener('click', function (e) {
+// Get the elements for the Tokyo Experience and Documentary links and overlays
+const tokyo1Link = document.querySelector('.tokyo1-link');
+const tokyo1Overlay = document.getElementById('tokyo1-overlay');
+const closeTokyo1Btn = document.getElementById('close-tokyo1');
+
+const tokyo2Link = document.querySelector('.tokyo2-link');
+const tokyo2Overlay = document.getElementById('tokyo2-overlay');
+const closeTokyo2Btn = document.getElementById('close-tokyo2');
+
+// Add click event to the "experience" link (Tokyo 1)
+tokyo1Link.addEventListener('click', function (e) {
     e.preventDefault();
-    mediaBrandsOverlay.classList.add('active'); // Slide in the MediaBrands overlay
+    tokyo1Overlay.classList.add('active'); // Slide in the Tokyo 1 overlay
     document.body.style.overflow = 'hidden'; // Disable background scrolling
 });
 
-// Add click event to the close button for MediaBrands
-closeMediaBrandsBtn.addEventListener('click', function () {
-    mediaBrandsOverlay.classList.remove('active'); // Slide out the MediaBrands overlay
+// Add click event to the "documentary" link (Tokyo 2)
+tokyo2Link.addEventListener('click', function (e) {
+    e.preventDefault();
+    tokyo2Overlay.classList.add('active'); // Slide in the Tokyo 2 overlay
+    document.body.style.overflow = 'hidden'; // Disable background scrolling
+});
+
+// Add click event to close button for Tokyo 1
+closeTokyo1Btn.addEventListener('click', function () {
+    tokyo1Overlay.classList.remove('active'); // Slide out the Tokyo 1 overlay
     document.body.style.overflow = ''; // Re-enable background scrolling
 });
 
+// Add click event to close button for Tokyo 2
+closeTokyo2Btn.addEventListener('click', function () {
+    tokyo2Overlay.classList.remove('active'); // Slide out the Tokyo 2 overlay
+    document.body.style.overflow = ''; // Re-enable background scrolling
+});
 
+// Select all slideshows
+const slideshows = document.querySelectorAll('.slideshow');
+
+// Function to start the slideshow
+function startSlideshow(slideshow) {
+    let currentImageIndex = 0;
+    const images = slideshow.querySelectorAll('img');
+    const totalImages = images.length;
+
+    // Function to switch images
+    function switchImage() {
+        images[currentImageIndex].classList.remove('visible');
+        images[currentImageIndex].classList.add('hidden');
+        currentImageIndex = (currentImageIndex + 1) % totalImages;
+        images[currentImageIndex].classList.remove('hidden');
+        images[currentImageIndex].classList.add('visible');
+    }
+
+    // Start image switching when mouse is over the slideshow
+    let intervalId = setInterval(switchImage, 1000); // Switch every second
+
+    // Stop switching when mouse leaves
+    slideshow.addEventListener('mouseleave', function () {
+        clearInterval(intervalId);
+        // Reset to first image when mouse leaves
+        images.forEach(img => img.classList.add('hidden'));
+        images[0].classList.remove('hidden');
+        images[0].classList.add('visible');
+    });
+}
+
+// Attach event listeners to each slideshow
+slideshows.forEach(slideshow => {
+    slideshow.addEventListener('mouseenter', function () {
+        startSlideshow(slideshow);
+    });
+});

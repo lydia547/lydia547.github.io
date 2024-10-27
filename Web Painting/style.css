@@ -345,6 +345,11 @@ header {
     width: 100%;
     height: 100%;
 }
+/* Show UCCA Overlay when class active is added */
+.ucca-overlay.active {
+    right: 0; 
+}
+
 
 /* Close Button Styling */
 .close-btn {
@@ -368,7 +373,7 @@ header {
 /* Dynamic Floating Image Styling */
 .ucca-images img {
     position: absolute;
-    width: 15%; /* Resize images to fit aesthetically */
+    width: 20%; /* Resize images to fit aesthetically */
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -397,32 +402,32 @@ header {
 /* Assign random initial positions for the images */
 .ucca-images img:nth-child(1) {
     top: 10%;
-    left: 15%;
-    animation-duration: 12s;
+    left: 10%;
+    animation-duration: 10s;
 }
 
 .ucca-images img:nth-child(2) {
-    top: 30%;
+    top: 20%;
     left: 50%;
     animation-duration: 14s;
 }
 
 .ucca-images img:nth-child(3) {
-    top: 50%;
-    left: 10%;
-    animation-duration: 10s;
+    top: 40%;
+    left: 25%;
+    animation-duration: 12s;
 }
 
 .ucca-images img:nth-child(4) {
-    top: 70%;
-    left: 70%;
-    animation-duration: 16s;
+    top: 55%;
+    left: 60%;
+    animation-duration: 10s;
 }
 
 .ucca-images img:nth-child(5) {
-    top: 20%;
+    top: 15%;
     left: 80%;
-    animation-duration: 18s;
+    animation-duration: 16s;
 }
 
 /* Make images responsive */
@@ -436,4 +441,152 @@ header {
     .ucca-images img {
         width: 35%; /* Further resize for mobile */
     }
+}
+
+/* Tokyo Overlay */
+.tokyo1-overlay {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially hidden on the right */
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+    color: white;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.5s ease;
+    overflow: hidden; /* Prevent overflow */
+}
+
+.tokyo1-overlay.active {
+    right: 0; /* Slide in to cover the full screen */
+}
+
+.tokyo1-overlay-content {
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Adjust images for flexible sizing */
+
+/* Specify different image sizes */
+.tokyo1-images img:nth-child(1) {
+    width: 200px; /* Example: large image */
+    height: auto;
+}
+
+.tokyo1-images img:nth-child(3) {
+    width: 150px; /* Example: medium image */
+    height: auto;
+}
+
+.tokyo1-images img:nth-child(4) {
+    width: 250px; /* Example: small image */
+    height: auto;
+}
+
+.tokyo1-images img:nth-child(5) {
+    width: 300px; /* Example: large image */
+    height: auto;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tokyo1-images img {
+        width: 100%; /* Make each image full width on smaller screens */
+        height: auto;
+    }
+
+    .tokyo1-overlay h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Base styles for the overlay and content */
+.tokyo2-overlay {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+    color: white;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.5s ease;
+    overflow: hidden;
+}
+
+.tokyo2-overlay.active {
+    right: 0;
+}
+
+.tokyo2-overlay-content {
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Hide images by default except for the first one */
+.slideshow img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.slideshow img:first-child {
+    opacity: 1;
+}
+
+/* Style the close button */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Hidden class to hide images */
+.hidden {
+    opacity: 0;
+}
+
+/* Visible class to show images */
+.visible {
+    opacity: 1;
 }
