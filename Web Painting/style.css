@@ -8,19 +8,19 @@ html {
     box-sizing: border-box;
 }
 
-/* Body styling */
+
 body, html {
     height: 100%;
     display: flex;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    overflow-y: hidden; /* Disable vertical scrolling */
-    background-color: #1a1a1a; /* Black background */
-    color: white; /* White text */
+    overflow-x: auto; 
+    overflow-y: hidden; 
+    background-color: #1a1a1a; 
+    color: white; 
     scroll-behavior: smooth;
     margin: bottom 0;
 }
 
-/* Hidden class for the navbar initially */
+
 .hidden {
     opacity: 0;
     transition: opacity 1s ease;
@@ -31,8 +31,6 @@ body, html {
     opacity: 1;
 }
 
-/* Header (nav bar) styling */
-/* Header (nav bar) styling */
 header {
     position: fixed;
     width: 100%;
@@ -46,20 +44,18 @@ header {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: italic;
-    display: flex; /* Enable flexbox for alignment */
-    justify-content: space-between; /* Space between icon and nav links */
-    align-items: center; /* Center the content vertically */
-    padding-left: 20px; /* Add some padding on the left */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
 }
 
-/* Align nav-icons to the left */
 .nav-icons {
-    margin-left: 20px; /* Ensure it stays to the left */
+    margin-left: 20px;
 }
 
-/* Navigation links stay centered */
 nav {
-    flex: 1; /* Takes remaining space, ensuring links are centered */
+    flex: 1;
 }
 
 .nav-links {
@@ -82,12 +78,11 @@ nav {
 
 .scroll-container {
     display: flex;
-    flex-direction: row; /* Arrange sections in a row horizontally */
-    width: 300vw; /* Adjust based on number of sections */
-    height: 100vh; /* Full height for all sections */
+    flex-direction: row;
+    width: 300vw;
+    height: 100vh;
 }
 
-/* Intro container with text */
 .intro-container {
     position: fixed;
     top: 0;
@@ -104,13 +99,12 @@ nav {
     font-family: "Jacquard 24", system-ui;
     font-weight: 400;
     font-style: normal;
-    font-size: 30vw; 
-    margin: 0; 
-    text-align: center; 
-    padding: 0; 
+    font-size: 30vw;
+    margin: 0;
+    text-align: center;
+    padding: 0;
     margin-right: 50px;
 }
-
 
 .text-line {
     font-size: 2.5rem;
@@ -135,7 +129,6 @@ nav {
     animation-delay: 2s;
 }
 
-/* Fade in keyframe animation */
 @keyframes fadeIn {
     to {
         opacity: 1;
@@ -143,18 +136,17 @@ nav {
     }
 }
 
-/* New intro text section */
 .intro-text {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;  /* Ensures sentences are stacked vertically */
+    flex-direction: column;
     text-align: center;
-    font-size: 1em; /* Slightly larger font */
+    font-size: 1em;
     margin-top: 200px;
     max-width: 700px;
-    height: 80vh;  /* Ensure it takes most of the page's height for centering */
-    opacity: 0; /* Initially hidden */
+    height: 80vh;
+    opacity: 0;
     transition: opacity 2s ease-in-out;
     margin-right: 50px;
     margin-left: 50px;
@@ -164,11 +156,11 @@ nav {
     font-style: italic;
     text-align: left;
 }
-/* Style for the direction button with arrow */
+
 .direction-btn {
     position: absolute;
-    bottom: 20px; /* Position it near the bottom */
-    right: 20px;  /* Position it on the right side */
+    bottom: 20px;
+    right: 20px;
     padding: 5px 10px;
     background-color: #ffffff;
     color: black;
@@ -179,34 +171,30 @@ nav {
     font-family: "Bodoni Moda SC", serif;
     display: flex;
     align-items: center;
-    gap: 0.5rem; /* Add space between text and arrow */
+    gap: 0.5rem;
 }
 
 
 
-/* To ensure the parent container has relative positioning */
+
 .intro-text {
-    position: relative; /* This allows the absolute button to position itself inside this container */
+    position: relative;
     padding: 20px;
 }
 
-
-/* Styling for the main content section */
 .main-content {
     display: flex;
-    width: 300vw; /* Adjust width based on number of images */
+    width: 300vw;
     height: 100vh;
     position: absolute;
     top: 0;
-    left: 100vw; /* Initially hidden */
+    left: 100vw;
     transition: transform 2s ease-in-out;
-    opacity: 0; /* Initially hidden */
-    transition: opacity 2s ease-in-out;
+    opacity: 0;
     margin-top: 100px;
-    margin-bottom: 50px; /* Add margin to create space before images appear */
+    margin-bottom: 50px;
 }
 
-/* Image container */
 .picture {
     width: 100vw;
     height: 100%;
@@ -221,7 +209,6 @@ nav {
     object-fit: cover;
 }
 
-/* Shanghai Section */
 .shanghai-section {
     height: 700px;
     display: flex;
@@ -232,38 +219,36 @@ nav {
     margin-bottom: 50px;
 }
 
-/* Shanghai Content Styling */
 .shanghai-content {
     display: flex;
-    flex-direction: row; /* Align items horizontally */
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* Add space between the image and the text */
-    max-width: 1200px; /* Set a max width for the whole section */
+    gap: 20px;
+    max-width: 1200px;
     margin: auto;
     height: 700px;
 }
 
-/* Shanghai Text Styling */
 .shanghai-text {
     font-size: 1.2rem;
     color: white;
     line-height: 1.6;
-    max-width: 50%; /* Set the text to take the other half of the section */
+    max-width: 50%;
     text-align: left;
     margin-right: 80px;
     font-family: "Electrolize", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-weight: 400;
+    font-style: normal;
 }
+
 .shanghai-text a {
-    color: #407fad; /* Link color */
+    color: #407fad;
     text-decoration: none;
 }
 
-/* Ensure the GIF resizes and fits within the page */
 .shanghai-content iframe {
-    max-width: 50%; /* Take half of the section */
+    max-width: 50%;
     height: 700px;
     object-fit: contain;
     margin-bottom: 40px;
@@ -275,7 +260,6 @@ nav {
     padding: 10px;
 }
 
-/* Fade-in effect */
 .fade-in {
     opacity: 0;
     animation: fadeIn 2s ease-in-out forwards;
@@ -285,7 +269,6 @@ nav {
     opacity: 0;
 }
 
-/* Media queries for responsiveness */
 @media (max-width: 768px) {
     .text-line {
         font-size: 2rem;
@@ -306,11 +289,10 @@ nav {
     }
 }
 
-/* UCCA Overlay */
 .ucca-overlay {
     position: fixed;
     top: 0;
-    right: -100%; /* Initially hidden on the right */
+    right: -100%;
     width: 100%;
     height: 100%;
     background-color: #1a1a1a;
@@ -320,7 +302,7 @@ nav {
     justify-content: center;
     align-items: center;
     transition: right 0.5s ease;
-    overflow: hidden; /* Prevents overflow due to floating images */
+    overflow: hidden;
 }
 
 .ucca-overlay-content {
@@ -328,12 +310,11 @@ nav {
     width: 100%;
     height: 100%;
 }
-/* Show UCCA Overlay when class active is added */
+
 .ucca-overlay.active {
-    right: 0; 
+    right: 0;
 }
 
-/* Close Button Styling */
 .close-btn {
     position: absolute;
     top: 20px;
@@ -352,17 +333,15 @@ nav {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Dynamic Floating Image Styling */
 .ucca-images img {
     position: absolute;
-    width: 20%; /* Resize images to fit aesthetically */
+    width: 20%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     animation: float 10s infinite ease-in-out;
 }
 
-/* Float animation to move the images randomly */
 @keyframes float {
     0% {
         transform: translate(0, 0);
@@ -381,7 +360,6 @@ nav {
     }
 }
 
-/* Assign random initial positions for the images */
 .ucca-images img:nth-child(1) {
     top: 10%;
     left: 10%;
@@ -412,24 +390,22 @@ nav {
     animation-duration: 16s;
 }
 
-/* Make images responsive */
 @media (max-width: 768px) {
     .ucca-images img {
-        width: 25%; /* Resize images for smaller screens */
+        width: 25%;
     }
 }
 
 @media (max-width: 480px) {
     .ucca-images img {
-        width: 35%; /* Further resize for mobile */
+        width: 35%;
     }
 }
 
-/* General section styling */
 .tokyo-section {
     display: flex;
-    flex-wrap: wrap; /* Ensures items wrap on smaller screens */
-    justify-content: flex-start; /* Align content to the left */
+    flex-wrap: wrap;
+    justify-content: flex-start;
     align-items: center;
     padding: 50px;
     margin: 0 auto;
@@ -437,25 +413,22 @@ nav {
     color: white;
 }
 
-/* Styling for the iframe (video or image) */
 .tokyo-content iframe {
-    flex: 1 1 50%; /* Make the iframe take 50% of the container */
+    flex: 1 1 50%;
     max-width: 600px;
     height: 400px;
     object-fit: cover;
     border-radius: 10px;
     text-align: left;
-
 }
 
-/* Styling for the text container */
 .tokyo-text {
-    flex: 1 0.5 30%; /* Make the text container take 50% of the container */
+    flex: 1 0.5 30%;
     margin-left: 0;
     text-align: left;
     font-family: "Electrolize", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .tokyo-text h1 {
@@ -470,7 +443,7 @@ nav {
 }
 
 .tokyo-text a {
-    color: #d66a43; /* Link color */
+    color: #d66a43;
     text-decoration: none;
 }
 
@@ -478,31 +451,26 @@ nav {
     text-decoration: underline;
 }
 
-/* Responsive Design for smaller screens */
 @media (max-width: 768px) {
     .tokyo-section {
-        flex-direction: column; /* Stack the text and image vertically */
-        align-items: flex-start; /* Align text and image to the left */
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .tokyo-content iframe {
-        width: 100%; /* Make the iframe full width on small screens */
-        margin-bottom: 20px; /* Add space below the image */
+        width: 100%;
+        margin-bottom: 20px;
     }
 
     .tokyo-text {
-        margin-left: 0; /* Remove left margin for small screens */
+        margin-left: 0;
     }
 }
 
-
-
-
-/* Tokyo 1 Overlay */
 .tokyo1-overlay {
     position: fixed;
     top: 0;
-    right: -100%; /* Initially hidden on the right */
+    right: -100%;
     width: 100%;
     height: 100%;
     background-color: #1a1a1a;
@@ -513,45 +481,43 @@ nav {
     align-items: center;
     transition: right 0.5s ease;
     overflow: hidden;
-
 }
 
 .tokyo1-overlay.active {
-    right: 0; /* Slide in to cover the full screen */
+    right: 0;
 }
 
 .tokyo1-overlay-content {
     width: 100%;
-    max-width: 1200px; /* Limit the content width */
+    max-width: 1200px;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Adjust images for flexible sizing */
 .tokyo1-images {
-    display: grid; /* Use CSS grid */
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-items: center; /* Center images horizontally in each cell */
-    align-items: center; 
+    justify-items: center;
+    align-items: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tokyo1-images img {
     width: 100%;
-    max-width: 100%; /* Ensure the image doesn't exceed the container width */
-    height: 500px; /* Maintain the aspect ratio */
-    object-fit: contain; /* Ensure the image is fully visible */
+    max-width: 100%;
+    height: 500px;
+    object-fit: contain;
     display: block;
-    margin: 0 auto; /* Ensure the image is centered */
+    margin: 0 auto;
     margin-bottom: 80px;
 }
+
 .tokyo1-images img:hover {
-    transform: scale(1.2); /* Enlarge the image by 10% */
+    transform: scale(1.2);
 }
 
-/* Close Button */
 .close-btn {
     position: absolute;
     top: 20px;
@@ -568,10 +534,9 @@ nav {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .tokyo1-images {
-        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+        grid-template-columns: 1fr;
     }
 
     .tokyo1-overlay-content {
@@ -579,11 +544,10 @@ nav {
     }
 }
 
-/* Tokyo 2 Overlay (Documentary) */
 .tokyo2-overlay {
     position: fixed;
     top: 0;
-    right: -100%; /* Initially hidden on the right */
+    right: -100%;
     width: 100%;
     height: 100%;
     background-color: #1a1a1a;
@@ -592,56 +556,56 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: right 0.5s ease; /* Add the same transition as Tokyo 1 */
+    transition: right 0.5s ease;
     overflow: hidden;
 }
 
 .tokyo2-overlay.active {
-    right: 0; /* Slide in to cover the full screen */
+    right: 0;
 }
 
 .tokyo2-overlay-content {
     width: 100%;
-    max-width: 1200px; /* Limit the content width */
+    max-width: 1200px;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Adjust images for flexible sizing */
 .tokyo2-images {
-    display: grid; /* Use CSS grid */
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-items: center; /* Center images horizontally in each cell */
-    align-items: center; 
+    justify-items: center;
+    align-items: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tokyo2-images img {
-    width: 80%; /* Make the images smaller */
-    max-width: 80%; /* Ensure the image doesn't exceed the container width */
-    height: 400px; /* Reduce the height */
-    object-fit: contain; /* Ensure the image is fully visible */
+    width: 80%;
+    max-width: 80%;
+    height: 400px;
+    object-fit: contain;
     display: block;
-    margin: 0 auto; /* Ensure the image is centered */
-    margin-bottom: 40px; /* Reduce margin for smaller images */
+    margin: 0 auto;
+    margin-bottom: 40px;
 }
 
 .tokyo2-images img:hover {
-    transform: scale(1.2); /* Enlarge the image by 10% */
+    transform: scale(1.2);
 }
+
 .centered-text {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Center the box */
+    transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.6);
     color: rgb(162, 159, 159);
     font-size: 2.5rem;
     font-family: "Bodoni Moda SC", serif;
@@ -653,8 +617,6 @@ nav {
     margin: 0;
 }
 
-
-/* Close Button */
 .close-btn {
     position: absolute;
     top: 20px;
@@ -671,10 +633,9 @@ nav {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .tokyo2-images {
-        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+        grid-template-columns: 1fr;
     }
 
     .tokyo2-overlay-content {
@@ -682,10 +643,9 @@ nav {
     }
 }
 
-/* End Section Styling */
 .end-section {
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -707,7 +667,7 @@ nav {
 .end-text p {
     margin: 0;
     padding: 10px 0;
-    font-size: 1.5rem; /* Similar font size as intro */
+    font-size: 1.5rem;
     color: white;
     font-family: "Bodoni Moda SC", serif;
     font-weight: 400;
@@ -716,6 +676,6 @@ nav {
 
 @media (max-width: 768px) {
     .end-text p {
-        font-size: 2rem; /* Adjust for smaller screens */
+        font-size: 2rem;
     }
 }
