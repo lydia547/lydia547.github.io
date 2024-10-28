@@ -14,10 +14,10 @@ body, html {
     display: flex;
     overflow-x: auto; /* Enable horizontal scrolling */
     overflow-y: hidden; /* Disable vertical scrolling */
-    font-family: 'Arial', sans-serif;
     background-color: #1a1a1a; /* Black background */
     color: white; /* White text */
     scroll-behavior: smooth;
+    margin: bottom 0;
 }
 
 /* Hidden class for the navbar initially */
@@ -459,13 +459,13 @@ nav {
 }
 
 .tokyo-text h1 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
 
 .tokyo-text p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.6;
 }
 
