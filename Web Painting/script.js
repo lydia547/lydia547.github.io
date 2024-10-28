@@ -5,7 +5,7 @@ window.addEventListener('load', () => {
         // Slide the intro text out of view to the left
         document.querySelector('.intro-container').style.transform = 'translateX(-100vw)';
         
-        // After the intro animation, reveal the second content (sentences)
+        // After intro animation, show the second content (sentences)
         const introText = document.querySelector('.intro-text');
         introText.classList.remove('hidden');
         introText.style.opacity = 1;  // Fade in the text
@@ -14,9 +14,11 @@ window.addEventListener('load', () => {
         const navbar = document.getElementById('navbar');
         navbar.classList.remove('hidden');
         navbar.classList.add('visible');
-    }, 4000); // Adjust the delay to match the last text animation
+    }, 4000); // Adjust the delay to match the last text animation (3.5s for text delay + buffer)
+    // Select the scroll container
 
-    // Add scroll event listener for showing the images after the intro text
+    
+    // Add scroll event listener for showing the images after the sentences
     window.addEventListener('scroll', function() {
         const introText = document.querySelector('.intro-text');
         const imagesSection = document.querySelector('.main-content');
@@ -31,28 +33,56 @@ window.addEventListener('load', () => {
     });
 });
 
-// Overlay handling for various sections (Fudan, UCCA, Tokyo1, Tokyo2)
-function setupOverlay(linkSelector, overlaySelector, closeBtnSelector) {
-    const link = document.querySelector(linkSelector);
-    const overlay = document.getElementById(overlaySelector);
-    const closeBtn = document.getElementById(closeBtnSelector);
 
-    // Open overlay on link click
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        overlay.classList.add('active'); // Slide in the overlay
-        document.body.style.overflow = 'hidden'; // Disable background scrolling
-    });
+// Get the elements for UCCA Edge and MediaBrands
+const uccaLink = document.querySelector('.ucca-link');
+const uccaOverlay = document.getElementById('ucca-overlay');
+const closeUccaBtn = document.getElementById('close-ucca');
 
-    // Close overlay on close button click
-    closeBtn.addEventListener('click', function() {
-        overlay.classList.remove('active'); // Slide out the overlay
-        document.body.style.overflow = ''; // Re-enable background scrolling
-    });
-}
+// Add click event to UCCA Edge link
+uccaLink.addEventListener('click', function (e) {
+    e.preventDefault();
+    uccaOverlay.classList.add('active'); // Slide in the UCCA overlay
+    document.body.style.overflow = 'hidden'; // Disable background scrolling
+});
 
-// Set up overlay interactions
-setupOverlay('.fudan-link', 'fudan-overlay', 'close-fudan');
-setupOverlay('.ucca-link', 'ucca-overlay', 'close-ucca');
-setupOverlay('.tokyo1-link', 'tokyo1-overlay', 'close-tokyo1');
-setupOverlay('.tokyo2-link', 'tokyo2-overlay', 'close-tokyo2');
+// Add click event to the close button for UCCA
+closeUccaBtn.addEventListener('click', function () {
+    uccaOverlay.classList.remove('active'); // Slide out the UCCA overlay
+    document.body.style.overflow = ''; // Re-enable background scrolling
+});
+
+// Get the elements for the Tokyo Experience and Documentary links and overlays
+const tokyo1Link = document.querySelector('.tokyo1-link');
+const tokyo1Overlay = document.getElementById('tokyo1-overlay');
+const closeTokyo1Btn = document.getElementById('close-tokyo1');
+
+const tokyo2Link = document.querySelector('.tokyo2-link');
+const tokyo2Overlay = document.getElementById('tokyo2-overlay');
+const closeTokyo2Btn = document.getElementById('close-tokyo2');
+
+// Add click event to the "experience" link (Tokyo 1)
+tokyo1Link.addEventListener('click', function (e) {
+    e.preventDefault();
+    tokyo1Overlay.classList.add('active'); // Slide in the Tokyo 1 overlay
+    document.body.style.overflow = 'hidden'; // Disable background scrolling
+});
+
+// Add click event to the "documentary" link (Tokyo 2)
+tokyo2Link.addEventListener('click', function (e) {
+    e.preventDefault();
+    tokyo2Overlay.classList.add('active'); // Slide in the Tokyo 2 overlay
+    document.body.style.overflow = 'hidden'; // Disable background scrolling
+});
+
+// Add click event to close button for Tokyo 1
+closeTokyo1Btn.addEventListener('click', function () {
+    tokyo1Overlay.classList.remove('active'); // Slide out the Tokyo 1 overlay
+    document.body.style.overflow = ''; // Re-enable background scrolling
+});
+
+// Add click event to close button for Tokyo 2
+closeTokyo2Btn.addEventListener('click', function () {
+    tokyo2Overlay.classList.remove('active'); // Slide out the Tokyo 2 overlay
+    document.body.style.overflow = ''; // Re-enable background scrolling
+});

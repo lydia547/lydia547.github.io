@@ -450,7 +450,7 @@ nav {
 
 /* Styling for the text container */
 .tokyo-text {
-    flex: 1 1 50%; /* Make the text container take 50% of the container */
+    flex: 1 0.5 30%; /* Make the text container take 50% of the container */
     margin-left: 0;
     text-align: left;
     font-family: "Electrolize", sans-serif;
@@ -631,6 +631,28 @@ nav {
 .tokyo2-images img:hover {
     transform: scale(1.2); /* Enlarge the image by 10% */
 }
+.centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the box */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    color: rgb(162, 159, 159);
+    font-size: 2.5rem;
+    font-family: "Bodoni Moda SC", serif;
+    text-align: center;
+    z-index: 2;
+}
+
+.centered-text p {
+    margin: 0;
+}
+
 
 /* Close Button */
 .close-btn {
@@ -657,5 +679,43 @@ nav {
 
     .tokyo2-overlay-content {
         padding: 10px;
+    }
+}
+
+/* End Section Styling */
+.end-section {
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+    color: white;
+    font-family: "Bodoni Moda SC", serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.end-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 80px;
+}
+
+.end-text p {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 1.5rem; /* Similar font size as intro */
+    color: white;
+    font-family: "Bodoni Moda SC", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .end-text p {
+        font-size: 2rem; /* Adjust for smaller screens */
     }
 }
