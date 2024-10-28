@@ -13,7 +13,7 @@ window.addEventListener('load', () => {
         const navbar = document.getElementById('navbar');
         navbar.classList.remove('hidden');
         navbar.classList.add('visible');
-    }, 2000);
+    }, 3000);
     
     // Add scroll event listener for showing the images after the sentences
     window.addEventListener('scroll', function() {
