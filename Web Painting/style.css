@@ -17,7 +17,7 @@ body, html {
     font-family: 'Arial', sans-serif;
     background-color: #1a1a1a; /* Black background */
     color: white; /* White text */
-    scroll-behavior: smooth; /* Smooth horizontal scrolling */
+    scroll-behavior: smooth;
 }
 
 /* Hidden class for the navbar initially */
@@ -32,15 +32,34 @@ body, html {
 }
 
 /* Header (nav bar) styling */
+/* Header (nav bar) styling */
 header {
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    background-color: black;
+    background-color: #333159;
     z-index: 3;
     padding: 1rem 0;
     text-align: center;
+    font-family: "Bodoni Moda SC", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+    display: flex; /* Enable flexbox for alignment */
+    justify-content: space-between; /* Space between icon and nav links */
+    align-items: center; /* Center the content vertically */
+    padding-left: 20px; /* Add some padding on the left */
+}
+
+/* Align nav-icons to the left */
+.nav-icons {
+    margin-left: 20px; /* Ensure it stays to the left */
+}
+
+/* Navigation links stay centered */
+nav {
+    flex: 1; /* Takes remaining space, ensuring links are centered */
 }
 
 .nav-links {
@@ -79,10 +98,19 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #1a1a1a;
+    background-color: #333159;
     z-index: 2;
-    transition: transform 1s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    font-family: "Jacquard 24", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30vw; 
+    margin: 0; 
+    text-align: center; 
+    padding: 0; 
+    margin-right: 50px;
 }
+
 
 .text-line {
     font-size: 2.5rem;
@@ -99,12 +127,12 @@ header {
 
 #line2 {
     animation: fadeIn 1s forwards;
-    animation-delay: 1.5s;
+    animation-delay: 1.2s;
 }
 
 #line3 {
     animation: fadeIn 1s forwards;
-    animation-delay: 2.5s;
+    animation-delay: 2s;
 }
 
 /* Fade in keyframe animation */
@@ -130,7 +158,38 @@ header {
     transition: opacity 2s ease-in-out;
     margin-right: 50px;
     margin-left: 50px;
+    font-family: "Bodoni Moda SC", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+    text-align: left;
 }
+/* Style for the direction button with arrow */
+.direction-btn {
+    position: absolute;
+    bottom: 20px; /* Position it near the bottom */
+    right: 20px;  /* Position it on the right side */
+    padding: 5px 10px;
+    background-color: #ffffff;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: 1px solid black;
+    font-family: "Bodoni Moda SC", serif;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Add space between text and arrow */
+}
+
+
+
+/* To ensure the parent container has relative positioning */
+.intro-text {
+    position: relative; /* This allows the absolute button to position itself inside this container */
+    padding: 20px;
+}
+
 
 /* Styling for the main content section */
 .main-content {
@@ -193,6 +252,13 @@ header {
     max-width: 50%; /* Set the text to take the other half of the section */
     text-align: left;
     margin-right: 80px;
+    font-family: "Electrolize", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.shanghai-text a {
+    color: #407fad; /* Link color */
+    text-decoration: none;
 }
 
 /* Ensure the GIF resizes and fits within the page */
@@ -208,7 +274,6 @@ header {
 .shanghai-text {
     padding: 10px;
 }
-
 
 /* Fade-in effect */
 .fade-in {
@@ -240,88 +305,6 @@ header {
         font-size: 0.8rem;
     }
 }
-/* Fudan Overlay Styling */
-.fudan-overlay {
-    position: fixed;
-    top: 0;
-    right: -100%; /* Initially hidden on the right */
-    width: 100%;
-    height: 100%;
-    background-color: #1a1a1a; /* Dark background */
-    color: white;
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: right 0.5s ease; /* Slide-in effect */
-}
-
-/* Fudan Content Styling */
-.fudan-overlay-content {
-    width: 90%;
-    max-width: 1200px;
-    text-align: center;
-}
-
-.fudan-overlay h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-/* Fudan Images Grid */
-.fudan-images {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.fudan-images img {
-    max-width: 30%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Close Button Styling */
-.close-btn {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    background-color: transparent;
-    border: 1px solid white;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.close-btn:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Show Overlay when class active is added */
-.fudan-overlay.active {
-    right: 0; /* Slides in to cover the full screen */
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .fudan-images img {
-        max-width: 45%;
-    }
-
-    .fudan-overlay h2 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .fudan-images img {
-        max-width: 90%;
-    }
-}
 
 /* UCCA Overlay */
 .ucca-overlay {
@@ -349,7 +332,6 @@ header {
 .ucca-overlay.active {
     right: 0; 
 }
-
 
 /* Close Button Styling */
 .close-btn {
@@ -443,7 +425,80 @@ header {
     }
 }
 
-/* Tokyo Overlay */
+/* General section styling */
+.tokyo-section {
+    display: flex;
+    flex-wrap: wrap; /* Ensures items wrap on smaller screens */
+    justify-content: flex-start; /* Align content to the left */
+    align-items: center;
+    padding: 50px;
+    margin: 0 auto;
+    max-width: 1200px;
+    color: white;
+}
+
+/* Styling for the iframe (video or image) */
+.tokyo-content iframe {
+    flex: 1 1 50%; /* Make the iframe take 50% of the container */
+    max-width: 600px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    text-align: left;
+
+}
+
+/* Styling for the text container */
+.tokyo-text {
+    flex: 1 1 50%; /* Make the text container take 50% of the container */
+    margin-left: 0;
+    text-align: left;
+    font-family: "Electrolize", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tokyo-text h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.tokyo-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.tokyo-text a {
+    color: #d66a43; /* Link color */
+    text-decoration: none;
+}
+
+.tokyo-text a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .tokyo-section {
+        flex-direction: column; /* Stack the text and image vertically */
+        align-items: flex-start; /* Align text and image to the left */
+    }
+
+    .tokyo-content iframe {
+        width: 100%; /* Make the iframe full width on small screens */
+        margin-bottom: 20px; /* Add space below the image */
+    }
+
+    .tokyo-text {
+        margin-left: 0; /* Remove left margin for small screens */
+    }
+}
+
+
+
+
+/* Tokyo 1 Overlay */
 .tokyo1-overlay {
     position: fixed;
     top: 0;
@@ -457,7 +512,8 @@ header {
     justify-content: center;
     align-items: center;
     transition: right 0.5s ease;
-    overflow: hidden; /* Prevent overflow */
+    overflow: hidden;
+
 }
 
 .tokyo1-overlay.active {
@@ -465,33 +521,34 @@ header {
 }
 
 .tokyo1-overlay-content {
-    text-align: center;
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1200px; /* Limit the content width */
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Adjust images for flexible sizing */
-
-/* Specify different image sizes */
-.tokyo1-images img:nth-child(1) {
-    width: 200px; /* Example: large image */
-    height: auto;
+.tokyo1-images {
+    display: grid; /* Use CSS grid */
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center; /* Center images horizontally in each cell */
+    align-items: center; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.tokyo1-images img:nth-child(3) {
-    width: 150px; /* Example: medium image */
-    height: auto;
+.tokyo1-images img {
+    width: 100%;
+    max-width: 100%; /* Ensure the image doesn't exceed the container width */
+    height: 500px; /* Maintain the aspect ratio */
+    object-fit: contain; /* Ensure the image is fully visible */
+    display: block;
+    margin: 0 auto; /* Ensure the image is centered */
+    margin-bottom: 80px;
 }
-
-.tokyo1-images img:nth-child(4) {
-    width: 250px; /* Example: small image */
-    height: auto;
-}
-
-.tokyo1-images img:nth-child(5) {
-    width: 300px; /* Example: large image */
-    height: auto;
+.tokyo1-images img:hover {
+    transform: scale(1.2); /* Enlarge the image by 10% */
 }
 
 /* Close Button */
@@ -500,7 +557,7 @@ header {
     top: 20px;
     left: 20px;
     padding: 10px 20px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     background-color: transparent;
     border: 1px solid white;
     color: white;
@@ -513,21 +570,20 @@ header {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .tokyo1-images img {
-        width: 100%; /* Make each image full width on smaller screens */
-        height: auto;
+    .tokyo1-images {
+        grid-template-columns: 1fr; /* Single column layout on smaller screens */
     }
 
-    .tokyo1-overlay h2 {
-        font-size: 2rem;
+    .tokyo1-overlay-content {
+        padding: 10px;
     }
 }
 
-/* Base styles for the overlay and content */
+/* Tokyo 2 Overlay (Documentary) */
 .tokyo2-overlay {
     position: fixed;
     top: 0;
-    right: -100%;
+    right: -100%; /* Initially hidden on the right */
     width: 100%;
     height: 100%;
     background-color: #1a1a1a;
@@ -536,41 +592,53 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: right 0.5s ease;
+    transition: right 0.5s ease; /* Add the same transition as Tokyo 1 */
     overflow: hidden;
 }
 
 .tokyo2-overlay.active {
-    right: 0;
+    right: 0; /* Slide in to cover the full screen */
 }
 
 .tokyo2-overlay-content {
-    width: 90%;
-    max-width: 1200px;
-    padding: 20px;
-}
-
-/* Hide images by default except for the first one */
-.slideshow img {
     width: 100%;
-    height: auto;
-    object-fit: cover;
-    position: absolute;
-    opacity: 0;
-    transition: opacity 0.5s ease;
+    max-width: 1200px; /* Limit the content width */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.slideshow img:first-child {
-    opacity: 1;
+/* Adjust images for flexible sizing */
+.tokyo2-images {
+    display: grid; /* Use CSS grid */
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center; /* Center images horizontally in each cell */
+    align-items: center; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Style the close button */
+.tokyo2-images img {
+    width: 80%; /* Make the images smaller */
+    max-width: 80%; /* Ensure the image doesn't exceed the container width */
+    height: 400px; /* Reduce the height */
+    object-fit: contain; /* Ensure the image is fully visible */
+    display: block;
+    margin: 0 auto; /* Ensure the image is centered */
+    margin-bottom: 40px; /* Reduce margin for smaller images */
+}
+
+.tokyo2-images img:hover {
+    transform: scale(1.2); /* Enlarge the image by 10% */
+}
+
+/* Close Button */
 .close-btn {
     position: absolute;
     top: 20px;
     left: 20px;
     padding: 10px 20px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     background-color: transparent;
     border: 1px solid white;
     color: white;
@@ -581,12 +649,13 @@ header {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Hidden class to hide images */
-.hidden {
-    opacity: 0;
-}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tokyo2-images {
+        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    }
 
-/* Visible class to show images */
-.visible {
-    opacity: 1;
+    .tokyo2-overlay-content {
+        padding: 10px;
+    }
 }

@@ -5,10 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Name - Personal Website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@1,6..96,400..900&family=Electrolize&family=Jacquard+24&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Nav bar (initially hidden) -->
     <header id="navbar" class="hidden">
+        <div class="nav-icons">
+            <div class="cart-icon">
+              <img src="https://i.pinimg.com/originals/dc/a6/16/dca616db3450b5a64c0d1b655a7d0be5.gif" alt="Decoration Icon" style="width:80px;height: 80px;">
+            </div>
+          </div>
         <nav>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
@@ -27,9 +35,10 @@
 
     <!-- New content with smaller fonts and fade-in effect -->
     <div class="intro-text hidden" id="about">
-        <p class="fade-in">I'm Zixuan Liu, and you can call me Lydia. I studied art history and films at Trinity college for my first two years of college, and then I transferred to UNC to study communications.</p>
+        <p class="fade-in">I'm Zixuan Liu, and you can call me Lydia. I studied at Trinity college in Hartford for my first two years of college, then I transferred to UNC to study Communications.</p>
         <p class="fade-in">During my college life, I found that I have a marvelous bond with two cities--Shanghai and Tokyo.</p>
         <p class="fade-in">I met various people, experienced lots of things, and created my own story here.</p>
+        <a href="#shanghai" class="direction-btn"> &rarr;</a>
     </div>
 
     <!-- Main content section with images -->
@@ -41,26 +50,13 @@
                 <iframe src="../self brand/cities/Shanghai/video sh.gif" height="600" width="700" frameborder="0" scrolling="no" alt="Shanghai City View"></iframe>
                 <div class="shanghai-text">
                     <h1>SHANGHAI</h1>
-                    <p>I studied at <a href="#fudan" class="fudan-link">Fudan University</a> as a transfer student during my freshman year at Trinity.</p>
-                    <p>I had an internship at <a href="#ucca" class="ucca-link">UCCA Edge</a>, one of the main modern art museums in Shanghai, and I had another one at 
-                    <a href="https://www.ipgmediabrands.com/" target="_blank" rel="noopener noreferrer">MediaBrands</a>, an advertising firm, during the last summer vacation.</p>
+                    <p>My first internship is at the <a href="#ucca-overlay" class="ucca-link">UCCA Edge</a>, one of the main modern art museums in Shanghai. Entering a gallery as a staff instead of a visitor is unique and memorable to me. This year, I had another internship at 
+                    <a href="https://www.ipgmediabrands.com/" target="_blank" rel="noopener noreferrer">IPG MediaBrands</a>, an advertising agency, and learned a lot of practical skills.</p>
                 </div>
             </div>
         </section>
         
         </section>
-            <!-- Fudan University Section -->
-            <div id="fudan-overlay" class="fudan-overlay">
-                <div class="fudan-overlay-content">
-                    <button id="close-fudan" class="close-btn">←</button>
-                    <h2>Fudan University</h2>
-                    <div class="fudan-images">
-                        <img src="path/to/fudan1.jpg" alt="Fudan University Campus 1">
-                        <img src="path/to/fudan2.jpg" alt="Fudan University Campus 2">
-                        <img src="path/to/fudan3.jpg" alt="Fudan University Campus 3">
-                    </div>
-                </div>
-            </div>
             <!-- UCCA Edge Fullscreen Overlay -->
             <div id="ucca-overlay" class="ucca-overlay">
                 <div class="ucca-overlay-content">
@@ -74,12 +70,10 @@
                     </div>
                 </div>
             </div>
-            
-
 
             <section id="tokyo" class="tokyo-section">
                 <div class="tokyo-content">
-                    <iframe src="../self brand/cities/Japan/video tokyo.gif" height="" width="700" frameborder="0" scrolling="no" alt="Tokyo City View"></iframe>
+                    <iframe src="../self brand/cities/Japan/Tokyo.gif" height="" width="700" frameborder="0" scrolling="no" alt="Tokyo City View"></iframe>
                     <div class="tokyo-text">
                         <h1>TOKYO</h1>
                         <p>Studying several courses about Japanese and Japanese culture at Trinity, I became intrigued by Japan and went on a summer vacation last year to 
@@ -93,31 +87,30 @@
                 <div class="tokyo1-overlay-content">
                     <button id="close-tokyo1" class="close-btn">←</button>
                     <div class="tokyo1-images">
-                        <img src="../self brand/cities/Japan/2023.7/IMG_9675.JPG" alt="Tokyo 1">
-                        <img src="../self brand/cities/Japan/2023.7/DSC04209.JPG" alt="Tokyo 3">
+                        <img src="../self brand/cities/Japan/2023.7/IMG_9927.JPG" alt="Tokyo 1">
                         <img src="../self brand/cities/Japan/2023.7/DSC04259.JPG" alt="Tokyo 4">
+                        <img src="../self brand/cities/Japan/2023.7/IMG_9675.JPG" alt="Tokyo 1">
                         <img src="../self brand/cities/Japan/2023.7/DSC04293.JPG" alt="Tokyo 5">
                     </div>
                 </div>
             </div>
+    
             
             <!-- Tokyo 2 (Documentary) Overlay -->
             <div id="tokyo2-overlay" class="tokyo2-overlay">
                 <div class="tokyo2-overlay-content">
                     <button id="close-tokyo2" class="close-btn">←</button>
                     <div class="tokyo2-images">
-                        <!-- Each set of images will be contained within a div with the "slideshow" class -->
-                        <div class="slideshow" id="slideshow1">
                             <img src="../self brand/cities/Japan/2024.7/无障碍/IMG_8117.jpg" alt="Tokyo 1">
-                            <img src="../self brand/cities/Japan/2024.7/无障碍/IMG_9776.jpg" alt="Tokyo 2" class="hidden">
-                            <img src="../self brand/cities/Japan/2024.7/无障碍/IMG_9777.jpg" alt="Tokyo 3" class="hidden">
-                            <img src="../self brand/cities/Japan/2024.7/无障碍/IMG_9778.jpg" alt="Tokyo 4" class="hidden">
-                        </div>
+                            <img src="../self brand/cities/Japan/2024.7/无障碍/IMG_9776.jpg" alt="Tokyo 2">
+                            <img src="../self brand/cities/Japan/2024.7/无障碍/IMG_9777.jpg" alt="Tokyo 3">
+                            <img src="../self brand/cities/Japan/2024.7/无障碍/IMG_9778.jpg" alt="Tokyo 4">
+
                     </div>
                 </div>
             </div>
             
-    <script src="script.js"></script>
-</body>
-</html>
-
+            <script src="script.js"></script>
+            
+            </body>
+            </html>
