@@ -44,7 +44,6 @@ body, html {
   
   .popup h2 {
     margin-bottom: 20px;
-    font-size: 40%;
     font-weight: 700;
     opacity: 0; /* Initially hidden */
     transform: translateY(20px); /* Slightly moved down */
