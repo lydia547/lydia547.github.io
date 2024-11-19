@@ -45,6 +45,9 @@ body, html {
   .popup h2 {
     margin-bottom: 20px;
     font-weight: 500;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Slightly moved down */
+    animation: fadeInUp 5s ease-in-out forwards;
   }
   
   .popup-buttons {
@@ -56,18 +59,21 @@ body, html {
   .button {
     text-align: center;
     cursor: pointer;
+   
   }
   
   .button img {
     width: 150px;
     height: 150px;
-    border-radius: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+  
   }
   
   .button span {
     display: block;
-    margin-top: 10px;
-    font-size: 16px;
+    margin-top: 13px;
+    font-size: 20px;
     font-weight: 500;
   }
   
@@ -82,5 +88,17 @@ body, html {
   }
   
   .button:hover span {
-    color: #0073e6; /* Change to your desired hover color */
+    color: #785e39; /* Change to your desired hover color */
   }
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  
