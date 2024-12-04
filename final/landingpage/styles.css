@@ -44,11 +44,12 @@ body, html {
   }
   
   .popup h2 {
-    margin-bottom: 20px;
+    margin-bottom: 100px;
     font-weight: 700;
     opacity: 0; /* Initially hidden */
     transform: translateY(20px); /* Slightly moved down */
     animation: fadeInUp 5s ease-in-out forwards;
+    
   }
   
   .popup-buttons {
@@ -62,20 +63,48 @@ body, html {
     cursor: pointer;
    
   }
-  
-  .button img {
-    width: 200px;
-    height: 200px;
-    border-radius: 5px;
-    margin-top: 30px;
-  
+  .button.choice {
+    position: relative; /* Ensures the overlay is positioned correctly */
+    overflow: hidden; /* Prevents the enlarged image from overflowing */
   }
   
+  .button.choice img {
+    display: block;
+    width: 350px;
+    height: 500px;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 5px;
+    /* Smooth scaling effect */
+  }
+
   .button span {
     display: block;
     margin-top: 13px;
     font-size: 20px;
     font-weight: 500;
+  }
+
+  .button.choice span {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+  }
+  .button.choice::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Match the parent element's width */
+    height: 100%;
+    background-color: rgba(251, 248, 248, 0.5); /* Light grey overlay */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in effect */
+    z-index: 1;
   }
   
   .button:hover {
@@ -88,9 +117,14 @@ body, html {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   }
   
-  .button:hover span {
-    color: #785e39; /* Change to your desired hover color */
+  .button.choice:hover::after {
+    opacity: 1; /* Shows the overlay */
   }
+  
+  .button:hover span {
+    color: #1b1814; /* Change to your desired hover color */
+  }
+
   @keyframes fadeInUp {
     0% {
       opacity: 0;
