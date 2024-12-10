@@ -65,32 +65,37 @@ body, html {
 
 .popup {
     text-align: center;
-  }
-  
-  .popup h2 {
+}
+
+.popup h2 {
     margin-bottom: 20px;
     font-weight: 700;
-    font-size: 25px; /* 增加标题字体大小 */
-    color: #333; /* 使用深灰色字体，增强对比 */
+    font-size: 25px;
+    color: #333;
     animation: fadeInUp 2s ease-in-out forwards;
-  }
+}
 
 .popup-buttons {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap; /* Enables wrapping for smaller screens */
 }
 
 .button {
     text-align: center;
     cursor: pointer;
+    flex: 1 1 calc(33.333% - 40px); /* Three buttons per row with space */
+    max-width: 400px;
+    box-sizing: border-box;
 }
 
 .button img {
-    width: 400px;
-    height: 250px;
+    width: 100%;
+    height: auto;
     border-radius: 5px;
     margin-top: 30px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .button span {
@@ -99,11 +104,7 @@ body, html {
     font-size: 20px;
     font-weight: 500;
     color: #333; 
-    text-decoration: none; /* Removes the underline */
-}
-
-.button span:hover {
-    color: #785e39; /* Optional hover color */
+    text-decoration: none;
 }
 
 .button:hover {
@@ -120,48 +121,89 @@ body, html {
     color: #785e39; 
 }
 
+/* Footer */
 .footer {
     background-color: #f4f4f4;
     padding: 10px 20px;
     border-top: 1px solid #ddd;
     text-align: left;
-  }
-  
+}
+
 .footer-content p {
     margin: 0;
     color: #333;
     font-size: 14px;
 }
-  
+
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .top-bar {
+        padding: 20px;
+    }
+
+    .popup h2 {
+        font-size: 22px;
+    }
+
+    .button {
+        flex: 1 1 calc(50% - 20px); /* Two buttons per row */
+    }
+
+    .button img {
+        margin-top: 20px;
+    }
+}
+
 @media (max-width: 768px) {
     .top-bar-left img {
         height: 25px;
     }
-  
+
+    .top-bar-left span {
+        font-size: 14px;
+    }
+
     .top-bar-right a {
-        font-size: 12px;
+        font-size: 14px;
         margin-left: 10px;
     }
-  
-    .button.choice {
-        flex: 1 1 100%; /* Buttons take full width on small screens */
+
+    .button {
+        flex: 1 1 calc(100% - 20px); /* One button per row */
     }
-  
+
+    .popup h2 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .popup h2 {
+        font-size: 16px;
+    }
+
+    .button img {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .button span {
+        font-size: 16px;
+    }
+
     .popup-buttons {
-        gap: 15px;
+        gap: 10px;
     }
 }
-a {
-    text-decoration: none;
-    color: inherit; /* Optional: Ensures the text inherits the default color of its parent element */
-}
 
-a:hover {
-    text-decoration: none; /* Ensures no underline appears on hover */
-}
-
-
+/* Keyframes */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -170,19 +212,14 @@ a:hover {
         opacity: 1;
     }
 }
-  
-.top-bar-left span {
-    opacity: 0; /* Initially hidden */
-    animation: fadeIn 0.5s ease-in forwards; /* Fades in over 0.5 seconds */
-}
+
 @keyframes fadeInUp {
     from {
-      opacity: 0;
-      transform: translateY(20px);
+        opacity: 0;
+        transform: translateY(20px);
     }
     to {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
-  
+}
