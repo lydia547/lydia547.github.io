@@ -150,7 +150,12 @@ section {
 }
 #candles .product-card:nth-child(2) .product-image img{margin-top: 20px;}
 
-
+#room-sprays .product-card:nth-child(3) .product-info {
+    margin-top: 70px; /* Adjust the value as needed */
+}
+#room-sprays .product-card:nth-child(2) .product-info {
+    margin-bottom: 20px; /* Adjust the value as needed */
+}
 
 
 #popup {
