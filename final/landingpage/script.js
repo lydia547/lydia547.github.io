@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     // Simulate the scroll-up effect
     setTimeout(() => {
-      intro.style.transform = "translateY(-100%)"; // Move intro off the screen
-      popupOverlay.style.transform = "translateY(-100%)"; // Move the popup content into view
-    }, 2000); // Wait 2 seconds before starting the transition
+      intro.style.transform = "translateY(-100%)"; 
+      popupOverlay.style.transform = "translateY(-100%)"; 
+    }, 2000); 
   });

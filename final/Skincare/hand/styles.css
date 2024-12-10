@@ -205,8 +205,8 @@ section {
 }
 
 #body-cleansers .product-card:nth-child(1) .product-image img {
-    margin-bottom: 50px; /* Adds space between the image and the text for the fourth product */
+    margin-bottom: 50px; 
   }
   #body-cleansers .product-card:nth-child(1) .product-info {
-    margin-top: 100px; /* Adds space between the image and the text for the fourth product */
+    margin-top: 100px;
   }

@@ -125,18 +125,21 @@ section {
 }
 
 #hair-treatments .product-card:nth-child(5) .product-info {
-    margin-top: 100px; /* Adjust the value as needed for the desired spacing */
+    margin-top: 100px;
 }
+
 #hair-treatments .product-card:nth-child(1) .product-info {
-    margin-top: 100px; /* Adjust the value as needed for the desired spacing */
+    margin-top: 100px;
 }
+
 #hair-treatments .product-card:nth-child(3) .product-info {
-    margin-top: 100px; /* Adjust the value as needed for the desired spacing */
+    margin-top: 100px;
 }
 
 #hair-treatments .product-card:nth-child(2) .product-image img {
-    margin-bottom: 40px; /* Adjust the value as needed for the desired spacing */
+    margin-bottom: 40px;
 }
+
 
 .footer {
     background-color: #f4f4f4;

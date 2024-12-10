@@ -138,29 +138,32 @@ section {
     font-size: 13px;
 }
 .product-card:nth-child(2) .product-info {
-    margin-top: 100px; /* Creates a distinct gap between the picture and text */
-    /* Adds some extra spacing within the text section */
-    /* A subtle dashed border for separation */
+    margin-top: 100px;
 }
-.product-card:nth-child(2) .product-image img {margin-top: 50px;}
+
+.product-card:nth-child(2) .product-image img {
+    margin-top: 50px;
+}
 
 #candles .product-card:nth-child(1) .product-info {
-    margin-top: 100px; /* Adds more space between the picture and text */
+    margin-top: 100px;
 }
 
-/* Adjust text position for the third product in the second row */
 #candles .product-card:nth-child(3) .product-info {
-    margin-top: 100px; /* Adds more space between the picture and text */
+    margin-top: 100px;
 }
-#candles .product-card:nth-child(2) .product-image img{margin-top: 20px;}
+
+#candles .product-card:nth-child(2) .product-image img {
+    margin-top: 20px;
+}
 
 #room-sprays .product-card:nth-child(3) .product-info {
-    margin-top: 70px; /* Adjust the value as needed */
-}
-#room-sprays .product-card:nth-child(2) .product-info {
-    margin-bottom: 20px; /* Adjust the value as needed */
+    margin-top: 70px;
 }
 
+#room-sprays .product-card:nth-child(2) .product-info {
+    margin-bottom: 20px;
+}
 
 #popup {
     position: fixed;

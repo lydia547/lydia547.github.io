@@ -58,7 +58,7 @@ document.querySelectorAll('.product-card').forEach(card => {
         // Change content to "Perfect"
         popup.innerHTML = `<p>Good to hear!</p>`;
         
-        // Wait for 0.5 seconds before closing the popup
+        
         setTimeout(() => {
           popup.remove();
         }, 1000);
