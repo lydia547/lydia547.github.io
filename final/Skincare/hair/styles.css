@@ -121,12 +121,18 @@ section {
     color: #000;
 }
 
-#eye-lip-care .product-card:nth-child(1) .product-image img {
-    margin-top: 20px;
+#hair-treatments .product-card:nth-child(5) .product-info {
+    margin-top: 100px; /* Adjust the value as needed for the desired spacing */
+}
+#hair-treatments .product-card:nth-child(1) .product-info {
+    margin-top: 100px; /* Adjust the value as needed for the desired spacing */
+}
+#hair-treatments .product-card:nth-child(3) .product-info {
+    margin-top: 100px; /* Adjust the value as needed for the desired spacing */
 }
 
-#eye-lip-care .product-card:nth-child(1) .product-info {
-    margin-top: 100px;
+#hair-treatments .product-card:nth-child(2) .product-image img {
+    margin-bottom: 40px; /* Adjust the value as needed for the desired spacing */
 }
 
 .footer {
