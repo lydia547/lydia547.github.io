@@ -110,6 +110,15 @@ body, html {
   .button:hover span {
     color: #785e39; /* 鼠标悬停时字体变为棕色 */
   }
+  a {
+    text-decoration: none;
+    color: inherit; /* Optional: Ensures the text inherits the default color of its parent element */
+}
+
+a:hover {
+    text-decoration: none; /* Ensures no underline appears on hover */
+}
+
   @keyframes fadeInUp {
     0% {
       opacity: 0;

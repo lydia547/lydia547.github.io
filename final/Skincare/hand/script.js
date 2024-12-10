@@ -17,19 +17,28 @@ document.querySelectorAll('.product-card').forEach(card => {
   });
   
    // Smooth scroll and vertical alignment with a larger offset
-    document.querySelectorAll('.scroll-link').forEach(link => {
-      link.addEventListener('click', function (e) {
+   document.querySelectorAll('.scroll-link').forEach(link => {
+    link.addEventListener('click', function (e) {
+      // Check if the link is internal by verifying it contains a hash (#)
+      if (this.hash && this.hash.startsWith('#')) {
         e.preventDefault();
-        const targetId = this.getAttribute('href').slice(1);
+        const targetId = this.hash.slice(1);
         const targetSection = document.getElementById(targetId);
   
-        // Scroll to target section and align it slightly lower in the viewport
-        window.scrollTo({
-          top: targetSection.offsetTop - (window.innerHeight / 2) + (targetSection.clientHeight / 2) + 50,
-          behavior: 'smooth'
-        });
-      });
+        if (targetSection) {
+          // Scroll to the target section and align slightly lower in the viewport
+          window.scrollTo({
+            top: targetSection.offsetTop - (window.innerHeight / 2) + (targetSection.clientHeight / 2) + 50,
+            behavior: 'smooth'
+          });
+        }
+      } else {
+        // Allow external links like "Further Info" to function normally
+        window.location.href = this.href;
+      }
     });
+  });
+  
      // Pop-up window logic
   window.onload = function () {
     setTimeout(() => {
