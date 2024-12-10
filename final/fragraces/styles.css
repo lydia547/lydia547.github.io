@@ -1,0 +1,124 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #888672;  /* 背景颜色稍作调整为浅灰色，增强对比 */
+  }
+  
+  /* Top Bar */
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #292828; /* 保持顶部栏背景为白色 */
+    padding: 30px 40px;
+  }
+  .top-bar-left {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adds spacing between the logo and the text */
+  }
+
+  .top-bar-left img {
+    width: 60px; /* Adjust logo width */
+    height: auto;
+    margin-right: 20px; /* Maintain aspect ratio */
+  }
+
+  .top-bar-left span {
+    font-size: 16px; /* 稍微增加字体大小，提升可读性 */
+    color: #f4f0f0; /* 设置为纯黑色，增加对比度 */
+    font-weight: 600; 
+  }
+  
+  .top-bar-right a {
+    font-size: 16px; /* 增大字体大小 */
+    color: #f4f3e6; /* 设置为纯黑色，提升对比度 */
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 600; /* 增加字体粗细 */
+  }
+  
+  .top-bar-right a:hover {
+    text-decoration: underline;
+    color: #785e39; /* 悬停时的颜色为温暖的棕色 */
+  }
+  
+  /* Popup Overlay */
+  .popup-overlay {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 60px);
+    background: rgba(255, 255, 255, 0.95); /* 设置为白色背景，稍微透明 */
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 1s ease-in-out;
+  }
+  
+  .popup {
+    text-align: center;
+  }
+  
+  .popup h2 {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 25px; /* 增加标题字体大小 */
+    color: #333; /* 使用深灰色字体，增强对比 */
+    animation: fadeInUp 1s ease-in-out forwards;
+  }
+  
+  .popup-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .button {
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .button img {
+    width: 350px;
+    height: 200px;
+    border-radius: 5px;
+    margin-top: 30px;
+  }
+  
+  .button span {
+    display: block;
+    margin-top: 13px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #333; /* 使用深灰色字体 */
+  }
+  
+  .button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .button:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .button:hover span {
+    color: #785e39; /* 鼠标悬停时字体变为棕色 */
+  }
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
