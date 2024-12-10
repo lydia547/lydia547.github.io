@@ -131,7 +131,7 @@ section {
 .footer-content p {
     margin: 0;
     color: #333;
-    font-size: 10px;
+    font-size: 13px;
 }
 .product-card:nth-child(2) .product-info {
     margin-top: 100px; /* Creates a distinct gap between the picture and text */

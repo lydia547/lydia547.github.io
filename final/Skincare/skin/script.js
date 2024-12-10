@@ -37,9 +37,9 @@ document.querySelectorAll('.product-card').forEach(card => {
       const popup = document.createElement("div");
       popup.id = "popup";
       popup.innerHTML = `
-        <p>Are these what you are looking for?</p>
-        <button id="yes">Yes</button>
-        <button id="no">No</button>
+        <p>Find what you're looking for?</p>
+        <button id="yes">Yeah</button>
+        <button id="no">Nah</button>
       `;
       document.body.appendChild(popup);
       document.getElementById("popup").style.display = "block";
