@@ -10,9 +10,13 @@ personalize this portfolio page using google fonts, different colors, different 
     /*this is how I do the border box fix from the "the box model layouts in CSS from flexbox to grid" LinkedIn Learning
     https://www.linkedin.com/learning-login/share?account=42563596&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fcss-layouts-from-float-to-flexbox-and-grid%2Fthe-box-model-and-layouts%3Ftrk%3Dshare_video_url%26shareId%3DnbY4ZLwhR2KIGIplOu9BiA%253D%253D*/
 
-body{
-    background-color: white;
-}
+    body {
+        background-image: url('https://i.pinimg.com/736x/f0/5e/d8/f05ed8613d002a741b6c9beca17f8a14.jpg');
+        background-size: cover;         /* Ensures the image covers the whole background */
+        background-repeat: no-repeat;   /* Prevents the image from repeating */
+        background-position: center;    /* Centers the background image */
+        background-attachment: fixed;   /* Optional: keeps image fixed during scroll */
+    }
 
 header, footer {
     display: flex;
